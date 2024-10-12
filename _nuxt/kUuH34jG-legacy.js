@@ -1,0 +1,1 @@
+System.register(["./CR9D2F97-legacy.js","./BkLinx76-legacy.js"],(function(t,e){"use strict";var a,r;return{setters:[t=>{a=t.M},t=>{r=t.u}],execute:function(){t("u",(function(t,e){const{title:l,titleTemplate:n,...s}=t;return r({title:l,titleTemplate:n,_flatMeta:s},{...e,transform(t){const e=a({...t._flatMeta});return delete t._flatMeta,{...t,meta:e}}})}))}}}));
