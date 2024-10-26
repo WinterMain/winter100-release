@@ -87,6 +87,16 @@
   animation: button-loading-spinner 1s ease infinite
 }
 
+@keyframes button-loading-spinner {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .discuss-wrapper .w-button[loading="false"]::before {
   display: none !important
 }
