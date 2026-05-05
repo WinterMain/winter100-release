@@ -1,0 +1,336 @@
+<!DOCTYPE html><html  data-capo=""><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Deploying - Next.js in Depth - Winter100</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ1S1HBYLX"></script>
+<link rel="stylesheet" type="text/css" href="/iconfont/iconfont.css?t=20240930">
+<link rel="stylesheet" href="/_nuxt/entry.CfkJKbr-.css">
+<link rel="stylesheet" href="/_nuxt/default.CerbM5oS.css">
+<link rel="stylesheet" href="/_nuxt/_chapter_.bM-96XUK.css">
+<link rel="preload" as="fetch" crossorigin="anonymous" href="/books/nextjs/18-deploying/_payload.json?adf5c24d-6909-4c89-9550-b77b1bc7d41e">
+<script src="/_nuxt/Bni5rCE1-legacy.js" nomodule crossorigin></script>
+<script src="/_nuxt/CoLxJWwc-legacy.js" nomodule crossorigin></script>
+<link rel="icon" type="image/x-icon" href="/favicon.ico?t=20260104">
+<script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-KZ1S1HBYLX');
+</script>
+<meta property="og:image" content="/slogan.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="zh-hans" href="https://winter100.com/books/nextjs/18-deploying?lang=zh_Hans_CN">
+<link rel="alternate" hreflang="zh-hant" href="https://winter100.com/books/nextjs/18-deploying?lang=zh_Hant_HK">
+<link rel="alternate" hreflang="en" href="https://winter100.com/books/nextjs/18-deploying?lang=en_US">
+<link rel="canonical" href="https://winter100.com/books/nextjs/18-deploying">
+<meta name="og:title" content="Deploying - Next.js in Depth - Winter100">
+<meta name="keywords" content="Winter100, WinterCCC, 100 points, blockchain, question and answer, tool, comment, reply, storage, permanent, blockchain wisdom, question and answer fun, 100-point project, toolbox, blog, technology">
+<meta name="description" content="Systematically learn the React full-stack framework Next.js">
+<meta name="og:description" content="Systematically learn the React full-stack framework Next.js">
+<script type="module" src="/_nuxt/DB7QiDPZ.js" crossorigin></script></head><body><div id="el-popper-container-1024"><!--teleport start anchor--><!--[--><div style="z-index:2001;position:absolute;left:0;top:0;width:140px;display:none;" class="el-popper is-light el-popover c-lang-legal-popover" tabindex="-1" aria-hidden="true"><!--[--><!--[--><!--[--><!--[--><!--v-if--><!--[--><div class="c-lang-legal-box"><div class="c-contain"><ul class="c-list"><!--[--><li class="item-list false"><img src="/images/cn.svg" class="c-lang-legal-flag" alt><div class="flex-shrink-0">简体中文</div></li><li class="item-list false"><img src="/images/cn.svg" class="c-lang-legal-flag" alt><div class="flex-shrink-0">繁体中文</div></li><li class="item-list list-item-active"><img src="/images/en.svg" class="c-lang-legal-flag" alt><div class="flex-shrink-0">English</div></li><!--]--></ul></div></div><!--]--><!--]--><span class="el-popper__arrow" style="position:absolute;" data-popper-arrow></span><!--]--><!--]--><!--]--></div><!--]--><!--teleport anchor--><!--teleport start anchor--><!--[--><!--v-if--><!--]--><!--teleport anchor--><!--teleport start anchor--><!--[--><!--v-if--><!--]--><!--teleport anchor--></div><div id="__nuxt"><!--[--><section class="el-container is-vertical l-home"><!--[--><div class="nuxt-loading-indicator" style="position:fixed;top:0;right:0;left:0;pointer-events:none;width:auto;height:3px;opacity:0;background:repeating-linear-gradient(to right,#00dc82 0%,#34cdfe 50%,#0047e1 100%);background-size:Infinity% auto;transform:scaleX(0%);transform-origin:left;transition:transform 0.1s, height 0.4s, opacity 0.4s;z-index:999999;"></div><!--[--><!----><!--]--><!--[--><!----><!--]--><div class="c-common-header"><header class="el-header c-common-header-inner" style=""><!--[--><a href="/" class="flex space-x-8 items-center"><div class="sub-logo"><svg t="1696732448231" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6740" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30"><defs><linearGradient id="left-to-right"><stop offset="0" stop-color="#ed3da1"><animate dur="3s" attributeName="offset" fill="freeze" values="-1;2;0" repeatCount="indefinite"></animate></stop><stop offset="0" stop-color="#ffe9f6"><animate dur="3s" attributeName="offset" fill="freeze" values="-1;2;0" repeatCount="indefinite"></animate></stop></linearGradient></defs><path d="M105.321374 914.265136c-11.700669 0-17.551004-11.702475-17.551003-17.541972 0-5.870203 5.850335-17.551004 11.7097-17.551004 269.155125-111.194286 561.722425-169.684988 848.441196-181.3983v5.839497c23.410369 0 52.662042-5.839497 76.076024-5.839497v11.711506c-292.558269 29.251673-579.284266 87.756824-854.300562 175.535323-17.551004 17.541972-40.964985 23.403144-64.375355 29.244447zM772.382332 580.741882c-29.260704 0-58.514183-5.861172-76.054349-29.240835-17.55281-23.412175-35.123682-46.826157-35.123681-76.079636 0-81.917327 23.403144-157.984319 76.068798-222.350642 46.835188-64.377161 117.042815-111.168999 193.106195-140.433316 29.251673 0 52.654817 17.563647 64.368129 40.954148-5.862978 5.850335-11.711506 11.711506-17.563647 11.711506 29.251673 11.700669 40.952342 35.102007 40.952342 64.366324 5.862978 163.834654-99.459299 310.121916-245.753787 351.072451z m157.996963-374.484627c-11.702475 5.850335-29.273347 17.551004-40.954148 29.264316-5.870203 0-5.870203-5.850335-5.870203-11.711506-87.778499 52.665654-146.281844 146.294487-152.114116 245.742949 0 11.711506 5.832272 52.665654 23.38147 46.835188 29.284184-11.7097 52.662042-23.423013 70.225688-46.835188 19.503523-21.441593 39.00524-42.894024 58.506958-64.344648 35.121876-46.81532 58.535857-105.320471 70.216658-163.847297 11.700669-17.55281-5.848528-29.253479-23.392307-35.103814zM122.872378 288.185419l-64.366323 29.251673c-5.839497 5.839497-11.689832 5.839497-17.540167 5.839497-5.862978 0-5.862978-11.713313-5.862978-17.540166 0-17.551004 11.713313-29.264316 29.273347-35.114651 35.103813-29.264316 70.20582-52.654817 111.158163-70.216657 17.551004 5.850335 29.264316 23.403144 35.11465 40.952341 0 17.540166 0 17.540166-81.919133 204.812282-29.249866 58.505151-52.651204 122.873281-58.523213 187.237798 0 5.852141 5.872009 17.55281 5.872009 23.412176v5.841303c-1.959745 1.948907-3.910458 3.912264-5.872009 5.861172-5.830466 0-11.700669 0-11.700669-5.861172-29.253479 0-52.663848-17.55281-58.505152-46.804482 0-46.813513 11.711506-99.470137 29.251673-140.433316 23.413982-64.366323 58.517795-122.871475 93.619802-187.237798zM637.792126 282.326054c11.700669 157.984319-87.760436 298.417635-239.892614 339.380813-29.264316 0-58.515989-5.850335-76.07783-29.264316-23.401338-17.561841-35.092976-46.813513-35.092976-76.056155 0-81.926358 23.403144-157.99335 76.068798-222.359673 46.804482-64.355486 117.008497-111.159968 193.086327-140.433316 29.242642 0 52.665654 17.551004 64.368129 40.975823-5.852141 5.839497-11.702475 11.689832-17.55281 11.689832 17.551004 17.549197 35.092976 46.811707 35.092976 76.066992z m-81.908295-35.103814c-11.7097 5.850335-29.260704 17.551004-40.963179 29.251673-5.850335 0-5.850335-5.850335-5.850335-11.700669-87.769468 52.665654-146.272813 146.28365-152.135791 245.762818 0 11.680801 5.862978 52.663848 23.413982 46.793645 29.251673-11.702475 52.665654-23.403144 70.20582-46.793645a140273.571944 140273.571944 0 0 0 58.515989-64.366324c35.103813-46.826157 58.514183-105.320471 70.214852-163.84549 11.713313-17.551004-5.839497-29.253479-23.401338-35.102008zM23.414885 808.944665c269.155125-111.170806 561.711587-169.684988 848.437584-181.3983v5.859365c29.251673 0 52.665654-5.859366 76.068798-5.859365v11.711506c-292.558269 29.26251-579.287878 87.778499-854.302368 175.544354-23.413982 11.713313-40.954148 17.554616-64.36813 23.3905h-5.837691c-5.872009 0-11.702475-5.835885-11.702475-17.551003 3.903233-3.896009 7.804661-7.797436 11.704282-11.697057z" fill="url(#left-to-right)" p-id="6741" class="logo-path"></path></svg></div><img class="h-40" src="/logo.svg"></a><div class="nav-items"><!--[--><!--[--><a href="/" class="nav-item">Home</a><!--]--><!--[--><a href="/question" class="nav-item">Question</a><!--]--><!--[--><a href="/blog" class="nav-item">Blog</a><!--]--><!--[--><a href="/message" class="nav-item">Message</a><!--]--><!--[--><a href="/books" class="nav-item active">Books</a><!--]--><!--[--><a href="/toolbox" class="nav-item">Toolbox</a><!--]--><!--]--></div><div class="flex-1"></div><div class="c-lang-legal xs:hidden"><!--[--><span class="c-lang-legal-trigger el-tooltip__trigger el-tooltip__trigger"><img src="/images/en.svg" class="c-lang-legal-trigger-icon" alt> English <i class="el-icon c-lang-legal-trigger-caret" style=""><!--[--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="m192 384 320 384 320-384z"></path></svg><!--]--></i></span><!--teleport start--><!--teleport end--><!--]--></div><i class="iconfont icon-caidan text-theme hover:opacity-70 text-28 hidden xs:block"></i><!--]--></header><!----></div><main class="l-default-home"><!--[--><div class="p-book-chapter u-cartoon-page"><div class="u-cartoon-sky" aria-hidden="true"></div><div class="page-container pt-30 pb-60"><div class="c-aside"><div class="fixed-area"><aside class="c-books-sidebar u-cartoon-box u-cartoon-box--no-hover" data-v-52e6855c><div class="sidebar-header" data-v-52e6855c><a href="/books" class="sidebar-back" data-v-52e6855c><i class="iconfont icon-arrow_left text-12" data-v-52e6855c></i><span data-v-52e6855c>All Books</span></a></div><p class="side-title" data-v-52e6855c>Next.js in Depth</p><nav class="sidebar-nav" data-v-52e6855c><!--[--><a href="/books/nextjs/01-introduction" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>01</span><span data-v-52e6855c>Introduction to Next.js</span></a><a href="/books/nextjs/02-installation" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>02</span><span data-v-52e6855c>Installation</span></a><a href="/books/nextjs/03-app-router" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>03</span><span data-v-52e6855c>App Router</span></a><a href="/books/nextjs/04-layouts-and-pages" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>04</span><span data-v-52e6855c>Layouts and Pages</span></a><a href="/books/nextjs/05-linking-and-navigating" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>05</span><span data-v-52e6855c>Linking and Navigating</span></a><a href="/books/nextjs/06-server-and-client-components" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>06</span><span data-v-52e6855c>Server and Client Components</span></a><a href="/books/nextjs/07-rendering" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>07</span><span data-v-52e6855c>Rendering Modes</span></a><a href="/books/nextjs/08-fetching-data" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>08</span><span data-v-52e6855c>Fetching Data</span></a><a href="/books/nextjs/09-mutating-data" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>09</span><span data-v-52e6855c>Mutating Data with Server Actions</span></a><a href="/books/nextjs/10-caching" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>10</span><span data-v-52e6855c>Caching</span></a><a href="/books/nextjs/11-revalidating" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>11</span><span data-v-52e6855c>Revalidating</span></a><a href="/books/nextjs/12-error-handling" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>12</span><span data-v-52e6855c>Error Handling</span></a><a href="/books/nextjs/13-css-styling" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>13</span><span data-v-52e6855c>CSS Styling</span></a><a href="/books/nextjs/14-images" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>14</span><span data-v-52e6855c>Image Optimization</span></a><a href="/books/nextjs/15-fonts" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>15</span><span data-v-52e6855c>Font Optimization</span></a><a href="/books/nextjs/16-metadata" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>16</span><span data-v-52e6855c>Metadata and OG Images</span></a><a href="/books/nextjs/17-route-handlers" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>17</span><span data-v-52e6855c>Route Handlers</span></a><a aria-current="page" href="/books/nextjs/18-deploying" class="router-link-active router-link-exact-active sidebar-item active" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>18</span><span data-v-52e6855c>Deploying</span></a><!--]--></nav></aside></div></div><div class="c-outer bg-white u-cartoon-box u-cartoon-box--no-hover"><div class="en_US multi-lang-stage"><!--[--><article class="c-chapter-content multi-lang-pane" data-lang="zh_Hans_CN"><div class="mark-down code-content"><h1>部署</h1>
+<p>Next.js 可以用多种方式部署：托管平台（Vercel、Netlify、Cloudflare…）、自建 Node.js 服务器、Docker、静态导出，甚至通过 Adapter 对接其它运行时。本章概览这些路径，帮你在生产环境做出合适选择。</p>
+<h2>构建产物</h2>
+<pre><code class="language-bash">pnpm build   # next build
+pnpm start   # next start
+</code></pre>
+<p><code>next build</code> 会输出：</p>
+<ul>
+<li><code>.next/server/</code> —— 服务端渲染代码、Server Components、Route Handlers。</li>
+<li><code>.next/static/</code> —— 客户端 JS、CSS、静态资源（带内容哈希，长缓存安全）。</li>
+<li><code>.next/standalone/</code>（可选） —— 只包含运行所需的最小 Node 代码 + <code>node_modules</code>。</li>
+</ul>
+<p><code>next start</code> 以生产模式启动 Node.js 服务。</p>
+<h2>一、托管到 Vercel 等平台</h2>
+<p>Next.js 的 “zero-config” 部署体验最完整的就是 <strong>Vercel</strong>。你只需把仓库连上去，平台会自动识别：</p>
+<ul>
+<li>Server Components / SSR / ISR</li>
+<li>Partial Prerendering（PPR）</li>
+<li>Image Optimization</li>
+<li>Middleware / Edge Runtime</li>
+<li>Cron Jobs、Skew Protection 等</li>
+</ul>
+<p>Netlify、Cloudflare Pages、AWS Amplify 等通过各自的 <strong>Adapter</strong> 也提供近似能力。</p>
+<h2>二、自建 Node.js 服务器</h2>
+<p>只要运行环境支持 <strong>Node.js 20.9+</strong>，就可以直接用 <code>next start</code>：</p>
+<pre><code class="language-bash">node_modules/.bin/next start -p 3000
+</code></pre>
+<p>常见部署做法：</p>
+<ol>
+<li>CI 中执行 <code>pnpm install --prod=false &amp;&amp; pnpm build</code>。</li>
+<li>把 <code>.next/</code>、<code>public/</code>、<code>package.json</code>、<code>node_modules</code>（或 <code>standalone</code>）拷贝到服务器。</li>
+<li>用 PM2 / systemd / supervisor 守护进程。</li>
+<li>前面放 Nginx / Caddy 做 TLS、gzip、静态资源缓存。</li>
+</ol>
+<h3>Standalone 输出</h3>
+<p>在 <code>next.config.js</code> 开启：</p>
+<pre><code class="language-js">module.exports = { output: 'standalone' };
+</code></pre>
+<p>构建后复制 <code>.next/standalone</code> + <code>.next/static</code> + <code>public</code>，启动：</p>
+<pre><code class="language-bash">node .next/standalone/server.js
+</code></pre>
+<p>镜像体积会小非常多，非常适合容器化部署。</p>
+<h2>三、Docker 部署</h2>
+<p>基于 <code>output: 'standalone'</code> 的典型多阶段 Dockerfile：</p>
+<pre><code class="language-dockerfile">FROM node:20-alpine AS deps
+WORKDIR /app
+COPY package.json pnpm-lock.yaml ./
+RUN corepack enable &amp;&amp; pnpm install --frozen-lockfile
+
+FROM node:20-alpine AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+RUN corepack enable &amp;&amp; pnpm build
+
+FROM node:20-alpine AS runner
+WORKDIR /app
+ENV NODE_ENV=production
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
+EXPOSE 3000
+CMD [&quot;node&quot;, &quot;server.js&quot;]
+</code></pre>
+<h2>四、静态导出</h2>
+<p>如果站点完全静态（无 Server Action、无 SSR），可以直接导出成静态文件：</p>
+<pre><code class="language-js">// next.config.js
+module.exports = { output: 'export' };
+</code></pre>
+<p>产物在 <code>out/</code>，可托管到任意静态服务器（Nginx、CDN、GitHub Pages）。注意：</p>
+<ul>
+<li>不能用 Server Actions、Route Handlers 的动态 API、<code>next/image</code> 默认优化等。</li>
+<li>可以用 <code>next/image</code> 的 <code>unoptimized</code> 模式或第三方 loader。</li>
+</ul>
+<h2>五、Adapter：面向其它运行时</h2>
+<p>Next.js 通过 Adapter 支持 Cloudflare Workers、Netlify Edge、Deno 等：</p>
+<ul>
+<li><code>@opennextjs/cloudflare</code></li>
+<li><code>@netlify/next</code></li>
+<li><code>@vercel/next</code>（官方）</li>
+</ul>
+<p>在 <code>next.config.js</code> 里配置对应 Adapter，再按平台文档部署即可。Adapter 会负责把构建产物转成运行时可执行的格式。</p>
+<h2>生产环境的几个“要点”</h2>
+<ol>
+<li><strong>设置环境变量</strong>：数据库、第三方密钥通过平台环境变量注入；本地用 <code>.env.local</code>，不要提交。</li>
+<li><strong>缓存策略</strong>：<code>.next/static/</code> 长缓存（immutable），页面响应结合 <code>cacheLife</code> / <code>revalidateTag</code> 管理。</li>
+<li><strong>镜像安全</strong>：多阶段构建，<code>runner</code> 阶段用非 root 用户。</li>
+<li><strong>观测</strong>：启用 <code>instrumentation.ts</code>、接入 OpenTelemetry / Sentry / Datadog。</li>
+<li><strong>Skew Protection</strong>：长时间用户仍能访问旧版本资源；在 Vercel 自动启用，自托管可用 <code>deploymentId</code> 实现。</li>
+</ol>
+<h2>跟 Nuxt 比较</h2>
+<ul>
+<li>Nuxt 用 Nitro，一键生成 Node / Cloudflare / Lambda 等 preset。</li>
+<li>Next.js 的 Adapter 方向接近 Nitro preset，只是需要额外适配包。</li>
+</ul>
+<p>选择部署方式前，先确认以下三件事：</p>
+<ul>
+<li>是否需要 SSR / Server Actions；</li>
+<li>是否需要细粒度缓存与边缘能力；</li>
+<li>运维成本（托管 vs 自建）能承受到什么程度。</li>
+</ul>
+<p>匹配好这三点，再从上面任选一条路径上线即可。</p>
+</div></article><article class="c-chapter-content multi-lang-pane" data-lang="zh_Hant_HK"><div class="mark-down code-content"><h1>部署</h1>
+<p>Next.js 可以透過多種方式部署：代管平台（Vercel、Netlify、Cloudflare…）、自建 Node.js 伺服器、Docker、靜態匯出，甚至經由 Adapter 接上其他執行時。本章概覽這些路徑，協助你在正式環境做出合適選擇。</p>
+<h2>建置產物</h2>
+<pre><code class="language-bash">pnpm build   # next build
+pnpm start   # next start
+</code></pre>
+<p><code>next build</code> 會輸出：</p>
+<ul>
+<li><code>.next/server/</code> —— 伺服器端渲染程式碼、Server Components、Route Handlers。</li>
+<li><code>.next/static/</code> —— 客戶端 JS、CSS、靜態資源（附內容雜湊，可安全長快取）。</li>
+<li><code>.next/standalone/</code>（可選） —— 僅包含執行所需的最小 Node 程式碼 + <code>node_modules</code>。</li>
+</ul>
+<p><code>next start</code> 以正式模式啟動 Node.js 伺服器。</p>
+<h2>一、部署至 Vercel 等平台</h2>
+<p>Next.js 的 “zero-config” 體驗最完整者非 <strong>Vercel</strong> 莫屬。只需接上儲存庫，平台會自動辨識：</p>
+<ul>
+<li>Server Components / SSR / ISR</li>
+<li>Partial Prerendering（PPR）</li>
+<li>Image Optimization</li>
+<li>Middleware / Edge Runtime</li>
+<li>Cron Jobs、Skew Protection 等</li>
+</ul>
+<p>Netlify、Cloudflare Pages、AWS Amplify 等透過各自的 <strong>Adapter</strong> 也能提供近似能力。</p>
+<h2>二、自建 Node.js 伺服器</h2>
+<p>只要執行環境支援 <strong>Node.js 20.9+</strong>，即可直接使用 <code>next start</code>：</p>
+<pre><code class="language-bash">node_modules/.bin/next start -p 3000
+</code></pre>
+<p>常見流程：</p>
+<ol>
+<li>CI 中執行 <code>pnpm install --prod=false &amp;&amp; pnpm build</code>。</li>
+<li>把 <code>.next/</code>、<code>public/</code>、<code>package.json</code>、<code>node_modules</code>（或 <code>standalone</code>）複製至伺服器。</li>
+<li>以 PM2 / systemd / supervisor 維持處理程序。</li>
+<li>前面放 Nginx / Caddy 處理 TLS、gzip、靜態資源快取。</li>
+</ol>
+<h3>Standalone 輸出</h3>
+<p>在 <code>next.config.js</code> 啟用：</p>
+<pre><code class="language-js">module.exports = { output: 'standalone' };
+</code></pre>
+<p>建置後將 <code>.next/standalone</code> + <code>.next/static</code> + <code>public</code> 一同部署，啟動：</p>
+<pre><code class="language-bash">node .next/standalone/server.js
+</code></pre>
+<p>映像檔體積大幅降低，極適合容器化。</p>
+<h2>三、Docker 部署</h2>
+<p>基於 <code>output: 'standalone'</code> 的多階段 Dockerfile 範例：</p>
+<pre><code class="language-dockerfile">FROM node:20-alpine AS deps
+WORKDIR /app
+COPY package.json pnpm-lock.yaml ./
+RUN corepack enable &amp;&amp; pnpm install --frozen-lockfile
+
+FROM node:20-alpine AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+RUN corepack enable &amp;&amp; pnpm build
+
+FROM node:20-alpine AS runner
+WORKDIR /app
+ENV NODE_ENV=production
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
+EXPOSE 3000
+CMD [&quot;node&quot;, &quot;server.js&quot;]
+</code></pre>
+<h2>四、靜態匯出</h2>
+<p>若網站完全靜態（無 Server Action、無 SSR），可直接匯出靜態檔案：</p>
+<pre><code class="language-js">// next.config.js
+module.exports = { output: 'export' };
+</code></pre>
+<p>產物位於 <code>out/</code>，可上架至任意靜態伺服器（Nginx、CDN、GitHub Pages）。注意：</p>
+<ul>
+<li>無法使用 Server Actions、Route Handlers 的動態 API、<code>next/image</code> 預設優化等。</li>
+<li>可使用 <code>next/image</code> 的 <code>unoptimized</code> 模式或第三方 loader。</li>
+</ul>
+<h2>五、Adapter：支援其他執行時</h2>
+<p>Next.js 透過 Adapter 支援 Cloudflare Workers、Netlify Edge、Deno 等：</p>
+<ul>
+<li><code>@opennextjs/cloudflare</code></li>
+<li><code>@netlify/next</code></li>
+<li><code>@vercel/next</code>（官方）</li>
+</ul>
+<p>在 <code>next.config.js</code> 中設定對應 Adapter，再依平台文件部署即可。Adapter 會將建置產物轉換成執行時可用的格式。</p>
+<h2>正式環境幾個重點</h2>
+<ol>
+<li><strong>環境變數</strong>：資料庫、第三方金鑰一律由平台注入；本地用 <code>.env.local</code>，切勿提交。</li>
+<li><strong>快取策略</strong>：<code>.next/static/</code> 長期快取（immutable），頁面回應搭配 <code>cacheLife</code> / <code>revalidateTag</code> 管理。</li>
+<li><strong>映像安全</strong>：多階段建置，<code>runner</code> 階段使用非 root 使用者。</li>
+<li><strong>觀測性</strong>：啟用 <code>instrumentation.ts</code>，串接 OpenTelemetry / Sentry / Datadog。</li>
+<li><strong>Skew Protection</strong>：長時間停留的使用者仍能存取舊版資源；Vercel 自動啟用，自建可用 <code>deploymentId</code> 實作。</li>
+</ol>
+<h2>對比 Nuxt</h2>
+<ul>
+<li>Nuxt 以 Nitro 為核心，一鍵產出 Node / Cloudflare / Lambda 等 preset。</li>
+<li>Next.js 的 Adapter 機制方向接近 Nitro preset，只是需額外的適配套件。</li>
+</ul>
+<p>選擇部署方式前，先確認三件事：</p>
+<ul>
+<li>是否需要 SSR / Server Actions；</li>
+<li>是否需要細粒度快取與邊緣能力；</li>
+<li>營運成本（代管 vs 自建）可承受至何程度。</li>
+</ul>
+<p>依此三點配對，再從上述路徑任選其一上線即可。</p>
+</div></article><article class="c-chapter-content multi-lang-pane" data-lang="en_US"><div class="mark-down code-content"><h1>Deploying</h1>
+<p>Next.js can be deployed in several ways: managed platforms (Vercel, Netlify, Cloudflare…), a self-hosted Node.js server, Docker, static export, or through adapters that target other runtimes. This chapter surveys those paths so you can pick the right one for production.</p>
+<h2>Build output</h2>
+<pre><code class="language-bash">pnpm build   # next build
+pnpm start   # next start
+</code></pre>
+<p><code>next build</code> produces:</p>
+<ul>
+<li><code>.next/server/</code> — SSR code, Server Components, Route Handlers.</li>
+<li><code>.next/static/</code> — client JS, CSS, static assets (content-hashed; safe to cache forever).</li>
+<li><code>.next/standalone/</code> (optional) — the minimal Node app plus the <code>node_modules</code> it needs.</li>
+</ul>
+<p><code>next start</code> launches the Node.js server in production mode.</p>
+<h2>1. Hosted platforms (Vercel &amp; co.)</h2>
+<p>Next.js has its smoothest zero-config experience on <strong>Vercel</strong>. Connect the repo and the platform auto-detects:</p>
+<ul>
+<li>Server Components / SSR / ISR</li>
+<li>Partial Prerendering (PPR)</li>
+<li>Image Optimization</li>
+<li>Middleware / Edge Runtime</li>
+<li>Cron Jobs, Skew Protection, etc.</li>
+</ul>
+<p>Netlify, Cloudflare Pages, AWS Amplify, and others provide similar capabilities through their respective <strong>adapters</strong>.</p>
+<h2>2. Self-hosted Node.js server</h2>
+<p>Any environment with <strong>Node.js 20.9+</strong> can run <code>next start</code> directly:</p>
+<pre><code class="language-bash">node_modules/.bin/next start -p 3000
+</code></pre>
+<p>Typical deployment steps:</p>
+<ol>
+<li>In CI, run <code>pnpm install --prod=false &amp;&amp; pnpm build</code>.</li>
+<li>Ship <code>.next/</code>, <code>public/</code>, <code>package.json</code>, <code>node_modules</code> (or <code>standalone</code>) to the server.</li>
+<li>Use PM2 / systemd / supervisor to keep the process alive.</li>
+<li>Put Nginx / Caddy in front for TLS, gzip, and static caching.</li>
+</ol>
+<h3>Standalone output</h3>
+<p>Enable in <code>next.config.js</code>:</p>
+<pre><code class="language-js">module.exports = { output: 'standalone' };
+</code></pre>
+<p>Copy <code>.next/standalone</code> + <code>.next/static</code> + <code>public</code> and launch:</p>
+<pre><code class="language-bash">node .next/standalone/server.js
+</code></pre>
+<p>The resulting image is dramatically smaller — ideal for containers.</p>
+<h2>3. Docker</h2>
+<p>A multi-stage Dockerfile built around <code>output: 'standalone'</code>:</p>
+<pre><code class="language-dockerfile">FROM node:20-alpine AS deps
+WORKDIR /app
+COPY package.json pnpm-lock.yaml ./
+RUN corepack enable &amp;&amp; pnpm install --frozen-lockfile
+
+FROM node:20-alpine AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+RUN corepack enable &amp;&amp; pnpm build
+
+FROM node:20-alpine AS runner
+WORKDIR /app
+ENV NODE_ENV=production
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
+EXPOSE 3000
+CMD [&quot;node&quot;, &quot;server.js&quot;]
+</code></pre>
+<h2>4. Static export</h2>
+<p>If the site is fully static (no Server Actions, no SSR), export HTML files:</p>
+<pre><code class="language-js">// next.config.js
+module.exports = { output: 'export' };
+</code></pre>
+<p>Artifacts land in <code>out/</code> and can be served by any static host (Nginx, CDN, GitHub Pages). Caveats:</p>
+<ul>
+<li>No Server Actions, no dynamic Route Handler APIs, no default <code>next/image</code> optimization.</li>
+<li>Use <code>next/image</code>'s <code>unoptimized</code> mode or a third-party loader instead.</li>
+</ul>
+<h2>5. Adapters: other runtimes</h2>
+<p>Adapters make Cloudflare Workers, Netlify Edge, Deno, and more possible:</p>
+<ul>
+<li><code>@opennextjs/cloudflare</code></li>
+<li><code>@netlify/next</code></li>
+<li><code>@vercel/next</code> (first-party)</li>
+</ul>
+<p>Wire up the adapter in <code>next.config.js</code>, then follow the platform's docs. The adapter transforms the build output into something the target runtime can execute.</p>
+<h2>Production checklist</h2>
+<ol>
+<li><strong>Environment variables</strong> — inject secrets via the platform. Use <code>.env.local</code> locally; never commit it.</li>
+<li><strong>Caching strategy</strong> — <code>.next/static/</code> is immutable; tune page responses with <code>cacheLife</code> / <code>revalidateTag</code>.</li>
+<li><strong>Image hardening</strong> — use multi-stage builds and run the <code>runner</code> stage as a non-root user.</li>
+<li><strong>Observability</strong> — enable <code>instrumentation.ts</code> and wire up OpenTelemetry / Sentry / Datadog.</li>
+<li><strong>Skew protection</strong> — long-lived users should still be able to fetch their original chunk versions. Vercel enables this automatically; self-host with <code>deploymentId</code>.</li>
+</ol>
+<h2>Compared to Nuxt</h2>
+<ul>
+<li>Nuxt uses Nitro, which produces presets for Node, Cloudflare, Lambda, etc. out of the box.</li>
+<li>Next.js adapters aim in the same direction as Nitro presets but require additional adapter packages.</li>
+</ul>
+<p>Before picking a deployment target, confirm:</p>
+<ul>
+<li>Whether you need SSR / Server Actions;</li>
+<li>Whether you need fine-grained caching or edge capabilities;</li>
+<li>How much operations overhead you're willing to absorb (managed vs self-hosted).</li>
+</ul>
+<p>Line those up, then pick the path above that fits.</p>
+</div></article><!--]--></div><div class="c-chapter-nav" data-v-0a101b04><a href="/books/nextjs/17-route-handlers" class="nav-link nav-prev u-cartoon-box" data-v-0a101b04><i class="iconfont icon-arrow_left text-12" data-v-0a101b04></i><div class="nav-label" data-v-0a101b04><span class="nav-hint" data-v-0a101b04>Previous Chapter</span><span class="nav-title" data-v-0a101b04>Route Handlers</span></div></a><div data-v-0a101b04></div></div></div></div><button class="sidebar-toggle"><i class="iconfont icon-caidan text-18"></i></button><!----></div><!--]--></main><div class="c-footer"><div class="common-footer-inner"><div class="logo-contract"><a href="/" class="inline-flex space-x-8 items-center"><div class="sub-logo"><svg t="1696732448231" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6740" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30"><defs><linearGradient id="left-to-right"><stop offset="0" stop-color="#ed3da1"><animate dur="3s" attributeName="offset" fill="freeze" values="-1;2;0" repeatCount="indefinite"></animate></stop><stop offset="0" stop-color="#ffe9f6"><animate dur="3s" attributeName="offset" fill="freeze" values="-1;2;0" repeatCount="indefinite"></animate></stop></linearGradient></defs><path d="M105.321374 914.265136c-11.700669 0-17.551004-11.702475-17.551003-17.541972 0-5.870203 5.850335-17.551004 11.7097-17.551004 269.155125-111.194286 561.722425-169.684988 848.441196-181.3983v5.839497c23.410369 0 52.662042-5.839497 76.076024-5.839497v11.711506c-292.558269 29.251673-579.284266 87.756824-854.300562 175.535323-17.551004 17.541972-40.964985 23.403144-64.375355 29.244447zM772.382332 580.741882c-29.260704 0-58.514183-5.861172-76.054349-29.240835-17.55281-23.412175-35.123682-46.826157-35.123681-76.079636 0-81.917327 23.403144-157.984319 76.068798-222.350642 46.835188-64.377161 117.042815-111.168999 193.106195-140.433316 29.251673 0 52.654817 17.563647 64.368129 40.954148-5.862978 5.850335-11.711506 11.711506-17.563647 11.711506 29.251673 11.700669 40.952342 35.102007 40.952342 64.366324 5.862978 163.834654-99.459299 310.121916-245.753787 351.072451z m157.996963-374.484627c-11.702475 5.850335-29.273347 17.551004-40.954148 29.264316-5.870203 0-5.870203-5.850335-5.870203-11.711506-87.778499 52.665654-146.281844 146.294487-152.114116 245.742949 0 11.711506 5.832272 52.665654 23.38147 46.835188 29.284184-11.7097 52.662042-23.423013 70.225688-46.835188 19.503523-21.441593 39.00524-42.894024 58.506958-64.344648 35.121876-46.81532 58.535857-105.320471 70.216658-163.847297 11.700669-17.55281-5.848528-29.253479-23.392307-35.103814zM122.872378 288.185419l-64.366323 29.251673c-5.839497 5.839497-11.689832 5.839497-17.540167 5.839497-5.862978 0-5.862978-11.713313-5.862978-17.540166 0-17.551004 11.713313-29.264316 29.273347-35.114651 35.103813-29.264316 70.20582-52.654817 111.158163-70.216657 17.551004 5.850335 29.264316 23.403144 35.11465 40.952341 0 17.540166 0 17.540166-81.919133 204.812282-29.249866 58.505151-52.651204 122.873281-58.523213 187.237798 0 5.852141 5.872009 17.55281 5.872009 23.412176v5.841303c-1.959745 1.948907-3.910458 3.912264-5.872009 5.861172-5.830466 0-11.700669 0-11.700669-5.861172-29.253479 0-52.663848-17.55281-58.505152-46.804482 0-46.813513 11.711506-99.470137 29.251673-140.433316 23.413982-64.366323 58.517795-122.871475 93.619802-187.237798zM637.792126 282.326054c11.700669 157.984319-87.760436 298.417635-239.892614 339.380813-29.264316 0-58.515989-5.850335-76.07783-29.264316-23.401338-17.561841-35.092976-46.813513-35.092976-76.056155 0-81.926358 23.403144-157.99335 76.068798-222.359673 46.804482-64.355486 117.008497-111.159968 193.086327-140.433316 29.242642 0 52.665654 17.551004 64.368129 40.975823-5.852141 5.839497-11.702475 11.689832-17.55281 11.689832 17.551004 17.549197 35.092976 46.811707 35.092976 76.066992z m-81.908295-35.103814c-11.7097 5.850335-29.260704 17.551004-40.963179 29.251673-5.850335 0-5.850335-5.850335-5.850335-11.700669-87.769468 52.665654-146.272813 146.28365-152.135791 245.762818 0 11.680801 5.862978 52.663848 23.413982 46.793645 29.251673-11.702475 52.665654-23.403144 70.20582-46.793645a140273.571944 140273.571944 0 0 0 58.515989-64.366324c35.103813-46.826157 58.514183-105.320471 70.214852-163.84549 11.713313-17.551004-5.839497-29.253479-23.401338-35.102008zM23.414885 808.944665c269.155125-111.170806 561.711587-169.684988 848.437584-181.3983v5.859365c29.251673 0 52.665654-5.859366 76.068798-5.859365v11.711506c-292.558269 29.26251-579.287878 87.778499-854.302368 175.544354-23.413982 11.713313-40.954148 17.554616-64.36813 23.3905h-5.837691c-5.872009 0-11.702475-5.835885-11.702475-17.551003 3.903233-3.896009 7.804661-7.797436 11.704282-11.697057z" fill="url(#left-to-right)" p-id="6741" class="logo-path"></path></svg></div><img class="h-50" src="/logo.svg"></a><div class="contacts"><!--[--><a class="contact-item" href="mailto:yldiswinter@gmail.com"><i class="iconfont icon-youxiang"></i></a><a class="contact-item" href="https://github.com/WinterMain"><i class="iconfont icon-github"></i></a><!--]--></div></div><div class="nav-area"><div class="pr-20"><p class="label"><span class="z-1">LINKS</span></p></div><div class="nav-items"><!--[--><!--[--><a href="/question" class="nav-item">Question</a><!--]--><!--[--><a href="/blog" class="nav-item">Blog</a><!--]--><!--[--><a href="/message" class="nav-item">Message</a><!--]--><!--[--><a class="nav-item" target="_blank" rel="noopener noreferrer" href="https://tools.winter100.com">Toolbox</a><!--]--><!--]--></div></div><div class="donate-area"><div class="pr-20"><p class="label"><span class="z-1">DONATE</span></p></div><div class="donate-list"><!--[--><div class="donate-item"><div class="c-common-qrcode"><canvas style="width:60px;height:60px;"></canvas></div><div class="ml-12"><div class="flex items-center mt-4"><img src="/images/btc.png" height="30" class="h-20"><span class="ml-8 text-primary font-w500 text-16 flex-1">BTC</span><!--[--><span class="c-copy el-tooltip__trigger el-tooltip__trigger"><i class="el-icon text-12" style=""><!--[--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M768 832a128 128 0 0 1-128 128H192A128 128 0 0 1 64 832V384a128 128 0 0 1 128-128v64a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64z"></path><path fill="currentColor" d="M384 128a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64V192a64 64 0 0 0-64-64zm0-64h448a128 128 0 0 1 128 128v448a128 128 0 0 1-128 128H384a128 128 0 0 1-128-128V192A128 128 0 0 1 384 64"></path></svg><!--]--></i></span><!--teleport start--><!--teleport end--><!--]--></div><p class="mt-12 text-addr"><span class="">1Q6ZDFC3FueXY3JocmeMqgiSsGGtppbvz2</span></p></div></div><div class="donate-item"><div class="c-common-qrcode"><canvas style="width:60px;height:60px;"></canvas></div><div class="ml-12"><div class="flex items-center mt-4"><img src="/images/eth.png" height="30" class="h-20"><span class="ml-8 text-primary font-w500 text-16 flex-1">ETH</span><!--[--><span class="c-copy el-tooltip__trigger el-tooltip__trigger"><i class="el-icon text-12" style=""><!--[--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M768 832a128 128 0 0 1-128 128H192A128 128 0 0 1 64 832V384a128 128 0 0 1 128-128v64a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64z"></path><path fill="currentColor" d="M384 128a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64V192a64 64 0 0 0-64-64zm0-64h448a128 128 0 0 1 128 128v448a128 128 0 0 1-128 128H384a128 128 0 0 1-128-128V192A128 128 0 0 1 384 64"></path></svg><!--]--></i></span><!--teleport start--><!--teleport end--><!--]--></div><p class="mt-12 text-addr"><span class="">0xff6FC30033269845d196cB48F6a0660598D218D8</span></p></div></div><!--]--></div></div><div class="flex-1 ml-20 flex justify-end xs:hidden"><div class="c-adsense mt-0"><div class="ad-container" style="background-image:url(/images/adsenseWinter.svg);"><!----></div></div></div></div></div><!--v-if--><!--]--></section><!--]--></div><div id="teleports"></div><script type="application/json" data-nuxt-data="nuxt-app" data-ssr id="__NUXT_DATA__" data-src="/books/nextjs/18-deploying/_payload.json?adf5c24d-6909-4c89-9550-b77b1bc7d41e">[{"state":1,"once":7,"_errors":8,"serverRendered":10,"path":11,"pinia":12,"prerenderedAt":43},["Reactive",2],{"$ssite-config":3},{"env":4,"name":5,"url":6},"production","Winter 100分","https://winter100.com/",["Set"],["ShallowReactive",9],{},true,"/books/nextjs/18-deploying",["Reactive",13],{"lang":14,"main":27},{"langOptions":15,"lang":24,"defaultLang":24},[16,20,23],{"val":17,"text":18,"icon":19},"zh_Hans_CN","简体中文","/images/cn.svg",{"val":21,"text":22,"icon":19},"zh_Hant_HK","繁体中文",{"val":24,"text":25,"icon":26},"en_US","English","/images/en.svg",{"category":28,"nav":29,"likes":30,"donateCoins":31},"browserplugin","all",[],[32,36,40],{"coin":33,"address":34,"icon":35},"BTC","1Q6ZDFC3FueXY3JocmeMqgiSsGGtppbvz2","/images/btc.png",{"coin":37,"address":38,"icon":39},"ETH","0xff6FC30033269845d196cB48F6a0660598D218D8","/images/eth.png",{"coin":41,"address":38,"icon":42},"CET","/images/cet.png",1777973623181]</script>
+<script>window.__NUXT__={};window.__NUXT__.config={public:{MODE:"",NODE_ENV:"production",NAME:"winter100"},app:{baseURL:"/",buildId:"adf5c24d-6909-4c89-9550-b77b1bc7d41e",buildAssetsDir:"/_nuxt/",cdnURL:""}}</script></body></html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html><html  data-capo=""><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Server and Client Components - Next.js in Depth - Winter100</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ1S1HBYLX"></script>
+<link rel="stylesheet" type="text/css" href="/iconfont/iconfont.css?t=20240930">
+<link rel="stylesheet" href="/_nuxt/entry.CfkJKbr-.css">
+<link rel="stylesheet" href="/_nuxt/default.CerbM5oS.css">
+<link rel="stylesheet" href="/_nuxt/_chapter_.bM-96XUK.css">
+<link rel="preload" as="fetch" crossorigin="anonymous" href="/books/nextjs/06-server-and-client-components/_payload.json?adf5c24d-6909-4c89-9550-b77b1bc7d41e">
+<script src="/_nuxt/Bni5rCE1-legacy.js" nomodule crossorigin></script>
+<script src="/_nuxt/CoLxJWwc-legacy.js" nomodule crossorigin></script>
+<link rel="icon" type="image/x-icon" href="/favicon.ico?t=20260104">
+<script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-KZ1S1HBYLX');
+</script>
+<meta property="og:image" content="/slogan.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="zh-hans" href="https://winter100.com/books/nextjs/06-server-and-client-components?lang=zh_Hans_CN">
+<link rel="alternate" hreflang="zh-hant" href="https://winter100.com/books/nextjs/06-server-and-client-components?lang=zh_Hant_HK">
+<link rel="alternate" hreflang="en" href="https://winter100.com/books/nextjs/06-server-and-client-components?lang=en_US">
+<link rel="canonical" href="https://winter100.com/books/nextjs/06-server-and-client-components">
+<meta name="og:title" content="Server and Client Components - Next.js in Depth - Winter100">
+<meta name="keywords" content="Winter100, WinterCCC, 100 points, blockchain, question and answer, tool, comment, reply, storage, permanent, blockchain wisdom, question and answer fun, 100-point project, toolbox, blog, technology">
+<meta name="description" content="Systematically learn the React full-stack framework Next.js">
+<meta name="og:description" content="Systematically learn the React full-stack framework Next.js">
+<script type="module" src="/_nuxt/DB7QiDPZ.js" crossorigin></script></head><body><div id="el-popper-container-1024"><!--teleport start anchor--><!--[--><div style="z-index:2001;position:absolute;left:0;top:0;width:140px;display:none;" class="el-popper is-light el-popover c-lang-legal-popover" tabindex="-1" aria-hidden="true"><!--[--><!--[--><!--[--><!--[--><!--v-if--><!--[--><div class="c-lang-legal-box"><div class="c-contain"><ul class="c-list"><!--[--><li class="item-list false"><img src="/images/cn.svg" class="c-lang-legal-flag" alt><div class="flex-shrink-0">简体中文</div></li><li class="item-list false"><img src="/images/cn.svg" class="c-lang-legal-flag" alt><div class="flex-shrink-0">繁体中文</div></li><li class="item-list list-item-active"><img src="/images/en.svg" class="c-lang-legal-flag" alt><div class="flex-shrink-0">English</div></li><!--]--></ul></div></div><!--]--><!--]--><span class="el-popper__arrow" style="position:absolute;" data-popper-arrow></span><!--]--><!--]--><!--]--></div><!--]--><!--teleport anchor--><!--teleport start anchor--><!--[--><!--v-if--><!--]--><!--teleport anchor--><!--teleport start anchor--><!--[--><!--v-if--><!--]--><!--teleport anchor--></div><div id="__nuxt"><!--[--><section class="el-container is-vertical l-home"><!--[--><div class="nuxt-loading-indicator" style="position:fixed;top:0;right:0;left:0;pointer-events:none;width:auto;height:3px;opacity:0;background:repeating-linear-gradient(to right,#00dc82 0%,#34cdfe 50%,#0047e1 100%);background-size:Infinity% auto;transform:scaleX(0%);transform-origin:left;transition:transform 0.1s, height 0.4s, opacity 0.4s;z-index:999999;"></div><!--[--><!----><!--]--><!--[--><!----><!--]--><div class="c-common-header"><header class="el-header c-common-header-inner" style=""><!--[--><a href="/" class="flex space-x-8 items-center"><div class="sub-logo"><svg t="1696732448231" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6740" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30"><defs><linearGradient id="left-to-right"><stop offset="0" stop-color="#ed3da1"><animate dur="3s" attributeName="offset" fill="freeze" values="-1;2;0" repeatCount="indefinite"></animate></stop><stop offset="0" stop-color="#ffe9f6"><animate dur="3s" attributeName="offset" fill="freeze" values="-1;2;0" repeatCount="indefinite"></animate></stop></linearGradient></defs><path d="M105.321374 914.265136c-11.700669 0-17.551004-11.702475-17.551003-17.541972 0-5.870203 5.850335-17.551004 11.7097-17.551004 269.155125-111.194286 561.722425-169.684988 848.441196-181.3983v5.839497c23.410369 0 52.662042-5.839497 76.076024-5.839497v11.711506c-292.558269 29.251673-579.284266 87.756824-854.300562 175.535323-17.551004 17.541972-40.964985 23.403144-64.375355 29.244447zM772.382332 580.741882c-29.260704 0-58.514183-5.861172-76.054349-29.240835-17.55281-23.412175-35.123682-46.826157-35.123681-76.079636 0-81.917327 23.403144-157.984319 76.068798-222.350642 46.835188-64.377161 117.042815-111.168999 193.106195-140.433316 29.251673 0 52.654817 17.563647 64.368129 40.954148-5.862978 5.850335-11.711506 11.711506-17.563647 11.711506 29.251673 11.700669 40.952342 35.102007 40.952342 64.366324 5.862978 163.834654-99.459299 310.121916-245.753787 351.072451z m157.996963-374.484627c-11.702475 5.850335-29.273347 17.551004-40.954148 29.264316-5.870203 0-5.870203-5.850335-5.870203-11.711506-87.778499 52.665654-146.281844 146.294487-152.114116 245.742949 0 11.711506 5.832272 52.665654 23.38147 46.835188 29.284184-11.7097 52.662042-23.423013 70.225688-46.835188 19.503523-21.441593 39.00524-42.894024 58.506958-64.344648 35.121876-46.81532 58.535857-105.320471 70.216658-163.847297 11.700669-17.55281-5.848528-29.253479-23.392307-35.103814zM122.872378 288.185419l-64.366323 29.251673c-5.839497 5.839497-11.689832 5.839497-17.540167 5.839497-5.862978 0-5.862978-11.713313-5.862978-17.540166 0-17.551004 11.713313-29.264316 29.273347-35.114651 35.103813-29.264316 70.20582-52.654817 111.158163-70.216657 17.551004 5.850335 29.264316 23.403144 35.11465 40.952341 0 17.540166 0 17.540166-81.919133 204.812282-29.249866 58.505151-52.651204 122.873281-58.523213 187.237798 0 5.852141 5.872009 17.55281 5.872009 23.412176v5.841303c-1.959745 1.948907-3.910458 3.912264-5.872009 5.861172-5.830466 0-11.700669 0-11.700669-5.861172-29.253479 0-52.663848-17.55281-58.505152-46.804482 0-46.813513 11.711506-99.470137 29.251673-140.433316 23.413982-64.366323 58.517795-122.871475 93.619802-187.237798zM637.792126 282.326054c11.700669 157.984319-87.760436 298.417635-239.892614 339.380813-29.264316 0-58.515989-5.850335-76.07783-29.264316-23.401338-17.561841-35.092976-46.813513-35.092976-76.056155 0-81.926358 23.403144-157.99335 76.068798-222.359673 46.804482-64.355486 117.008497-111.159968 193.086327-140.433316 29.242642 0 52.665654 17.551004 64.368129 40.975823-5.852141 5.839497-11.702475 11.689832-17.55281 11.689832 17.551004 17.549197 35.092976 46.811707 35.092976 76.066992z m-81.908295-35.103814c-11.7097 5.850335-29.260704 17.551004-40.963179 29.251673-5.850335 0-5.850335-5.850335-5.850335-11.700669-87.769468 52.665654-146.272813 146.28365-152.135791 245.762818 0 11.680801 5.862978 52.663848 23.413982 46.793645 29.251673-11.702475 52.665654-23.403144 70.20582-46.793645a140273.571944 140273.571944 0 0 0 58.515989-64.366324c35.103813-46.826157 58.514183-105.320471 70.214852-163.84549 11.713313-17.551004-5.839497-29.253479-23.401338-35.102008zM23.414885 808.944665c269.155125-111.170806 561.711587-169.684988 848.437584-181.3983v5.859365c29.251673 0 52.665654-5.859366 76.068798-5.859365v11.711506c-292.558269 29.26251-579.287878 87.778499-854.302368 175.544354-23.413982 11.713313-40.954148 17.554616-64.36813 23.3905h-5.837691c-5.872009 0-11.702475-5.835885-11.702475-17.551003 3.903233-3.896009 7.804661-7.797436 11.704282-11.697057z" fill="url(#left-to-right)" p-id="6741" class="logo-path"></path></svg></div><img class="h-40" src="/logo.svg"></a><div class="nav-items"><!--[--><!--[--><a href="/" class="nav-item">Home</a><!--]--><!--[--><a href="/question" class="nav-item">Question</a><!--]--><!--[--><a href="/blog" class="nav-item">Blog</a><!--]--><!--[--><a href="/message" class="nav-item">Message</a><!--]--><!--[--><a href="/books" class="nav-item active">Books</a><!--]--><!--[--><a href="/toolbox" class="nav-item">Toolbox</a><!--]--><!--]--></div><div class="flex-1"></div><div class="c-lang-legal xs:hidden"><!--[--><span class="c-lang-legal-trigger el-tooltip__trigger el-tooltip__trigger"><img src="/images/en.svg" class="c-lang-legal-trigger-icon" alt> English <i class="el-icon c-lang-legal-trigger-caret" style=""><!--[--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="m192 384 320 384 320-384z"></path></svg><!--]--></i></span><!--teleport start--><!--teleport end--><!--]--></div><i class="iconfont icon-caidan text-theme hover:opacity-70 text-28 hidden xs:block"></i><!--]--></header><!----></div><main class="l-default-home"><!--[--><div class="p-book-chapter u-cartoon-page"><div class="u-cartoon-sky" aria-hidden="true"></div><div class="page-container pt-30 pb-60"><div class="c-aside"><div class="fixed-area"><aside class="c-books-sidebar u-cartoon-box u-cartoon-box--no-hover" data-v-52e6855c><div class="sidebar-header" data-v-52e6855c><a href="/books" class="sidebar-back" data-v-52e6855c><i class="iconfont icon-arrow_left text-12" data-v-52e6855c></i><span data-v-52e6855c>All Books</span></a></div><p class="side-title" data-v-52e6855c>Next.js in Depth</p><nav class="sidebar-nav" data-v-52e6855c><!--[--><a href="/books/nextjs/01-introduction" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>01</span><span data-v-52e6855c>Introduction to Next.js</span></a><a href="/books/nextjs/02-installation" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>02</span><span data-v-52e6855c>Installation</span></a><a href="/books/nextjs/03-app-router" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>03</span><span data-v-52e6855c>App Router</span></a><a href="/books/nextjs/04-layouts-and-pages" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>04</span><span data-v-52e6855c>Layouts and Pages</span></a><a href="/books/nextjs/05-linking-and-navigating" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>05</span><span data-v-52e6855c>Linking and Navigating</span></a><a aria-current="page" href="/books/nextjs/06-server-and-client-components" class="router-link-active router-link-exact-active sidebar-item active" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>06</span><span data-v-52e6855c>Server and Client Components</span></a><a href="/books/nextjs/07-rendering" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>07</span><span data-v-52e6855c>Rendering Modes</span></a><a href="/books/nextjs/08-fetching-data" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>08</span><span data-v-52e6855c>Fetching Data</span></a><a href="/books/nextjs/09-mutating-data" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>09</span><span data-v-52e6855c>Mutating Data with Server Actions</span></a><a href="/books/nextjs/10-caching" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>10</span><span data-v-52e6855c>Caching</span></a><a href="/books/nextjs/11-revalidating" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>11</span><span data-v-52e6855c>Revalidating</span></a><a href="/books/nextjs/12-error-handling" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>12</span><span data-v-52e6855c>Error Handling</span></a><a href="/books/nextjs/13-css-styling" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>13</span><span data-v-52e6855c>CSS Styling</span></a><a href="/books/nextjs/14-images" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>14</span><span data-v-52e6855c>Image Optimization</span></a><a href="/books/nextjs/15-fonts" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>15</span><span data-v-52e6855c>Font Optimization</span></a><a href="/books/nextjs/16-metadata" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>16</span><span data-v-52e6855c>Metadata and OG Images</span></a><a href="/books/nextjs/17-route-handlers" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>17</span><span data-v-52e6855c>Route Handlers</span></a><a href="/books/nextjs/18-deploying" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>18</span><span data-v-52e6855c>Deploying</span></a><!--]--></nav></aside></div></div><div class="c-outer bg-white u-cartoon-box u-cartoon-box--no-hover"><div class="en_US multi-lang-stage"><!--[--><article class="c-chapter-content multi-lang-pane" data-lang="zh_Hans_CN"><div class="mark-down code-content"><h1>服务端与客户端组件</h1>
+<p>App Router 里，布局和页面默认都是 <strong>服务端组件（Server Components）</strong>。它们在服务器上运行，可以直接访问数据库、使用密钥，并把极少量 JavaScript 发到浏览器。需要交互时，你再加入 <strong>客户端组件（Client Components）</strong>。</p>
+<h2>何时选哪一种？</h2>
+<p><strong>选服务端组件</strong>：</p>
+<ul>
+<li>靠近数据源获取数据（数据库、API）。</li>
+<li>使用 API Key、Token 等不能暴露给客户端的机密。</li>
+<li>减少发到浏览器的 JS，优化 FCP。</li>
+<li>渐进式流式输出。</li>
+</ul>
+<p><strong>选客户端组件</strong>：</p>
+<ul>
+<li>需要 <code>useState</code>、<code>useEffect</code> 等 hooks。</li>
+<li>需要浏览器 API（<code>localStorage</code>、<code>window</code>、<code>Navigator.geolocation</code>）。</li>
+<li>监听 <code>onClick</code>、<code>onChange</code> 等事件。</li>
+</ul>
+<h2>在 Next.js 里，它们如何运作？</h2>
+<p><strong>服务器侧</strong>：</p>
+<ul>
+<li>服务端组件被渲染为一种特殊的数据格式：<strong>RSC Payload</strong>。</li>
+<li>它与客户端组件的占位符一起，在服务端拼出首屏 HTML。</li>
+</ul>
+<p><strong>客户端首次加载</strong>：</p>
+<ol>
+<li>HTML 立刻呈现一个非交互预览。</li>
+<li>RSC Payload 协调服务端/客户端组件树。</li>
+<li>JavaScript 加载并 <strong>水合</strong> 客户端组件，让页面变得可交互。</li>
+</ol>
+<p><strong>后续导航</strong>：</p>
+<ul>
+<li>RSC Payload 被预取并缓存，切换瞬间完成。</li>
+<li>客户端组件完全在浏览器里渲染。</li>
+</ul>
+<h2>写一个客户端组件</h2>
+<p>在文件顶部加 <code>'use client'</code> 指令：</p>
+<pre><code class="language-tsx">'use client';
+
+import { useState } from 'react';
+
+export default function Counter() {
+  const [n, setN] = useState(0);
+  return (
+    &lt;div&gt;
+      &lt;p&gt;{n} 次点击&lt;/p&gt;
+      &lt;button onClick={() =&gt; setN(n + 1)}&gt;点我&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<p><code>'use client'</code> 声明了一道分界线：从该文件开始，它所有的 import 都属于客户端 bundle，无需每个文件都重复写指令。</p>
+<h2>减小 JS 体积的诀窍</h2>
+<p><strong>把 <code>'use client'</code> 放在尽可能小的叶子组件上</strong>，而不是整块页面。例如：</p>
+<pre><code class="language-tsx">// 布局：服务端组件
+import Search from './search';   // 客户端组件
+import Logo from './logo';       // 服务端组件
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    &lt;&gt;
+      &lt;nav&gt;
+        &lt;Logo /&gt;
+        &lt;Search /&gt;
+      &lt;/nav&gt;
+      &lt;main&gt;{children}&lt;/main&gt;
+    &lt;/&gt;
+  );
+}
+</code></pre>
+<p>整个布局依然是服务端组件，只有 <code>Search</code> 是客户端 JS。</p>
+<h2>服务端传递数据到客户端</h2>
+<p>直接用 props 即可（注意 props 必须可序列化）：</p>
+<pre><code class="language-tsx">// 服务端组件
+import LikeButton from '@/app/ui/like-button';
+import { getPost } from '@/lib/data';
+
+export default async function Page({
+  params,
+}: {
+  params: Promise&lt;{ id: string }&gt;;
+}) {
+  const { id } = await params;
+  const post = await getPost(id);
+  return &lt;LikeButton likes={post.likes} /&gt;;
+}
+</code></pre>
+<pre><code class="language-tsx">// 客户端组件
+'use client';
+export default function LikeButton({ likes }: { likes: number }) {
+  // ...
+}
+</code></pre>
+<h2>在客户端组件里嵌套服务端组件</h2>
+<p>客户端组件不能直接 <code>import</code> 服务端组件，但可以通过 <strong>children 插槽</strong> 把它传进来：</p>
+<pre><code class="language-tsx">// 客户端组件：Modal
+'use client';
+export default function Modal({ children }: { children: React.ReactNode }) {
+  return &lt;div className=&quot;modal&quot;&gt;{children}&lt;/div&gt;;
+}
+</code></pre>
+<pre><code class="language-tsx">// 服务端组件：Page
+import Modal from './ui/modal';
+import Cart from './ui/cart'; // 服务端组件
+
+export default function Page() {
+  return (
+    &lt;Modal&gt;
+      &lt;Cart /&gt;
+    &lt;/Modal&gt;
+  );
+}
+</code></pre>
+<p>这种「客户端外壳 + 服务端内容」的组合非常常见。</p>
+<h2>Context Provider</h2>
+<p>React Context 不被服务端组件支持。把 Provider 封装成客户端组件，在根布局里使用：</p>
+<pre><code class="language-tsx">'use client';
+import { createContext } from 'react';
+
+export const ThemeContext = createContext({});
+
+export default function ThemeProvider({ children }: { children: React.ReactNode }) {
+  return &lt;ThemeContext.Provider value=&quot;dark&quot;&gt;{children}&lt;/ThemeContext.Provider&gt;;
+}
+</code></pre>
+<h2>防止「环境污染」</h2>
+<p>服务器代码可能意外 import 到客户端。用 <code>server-only</code> 包在构建期抛出错误：</p>
+<pre><code class="language-ts">import 'server-only';
+
+export async function getData() {
+  const res = await fetch('https://external-service.com/data', {
+    headers: { authorization: process.env.API_KEY },
+  });
+  return res.json();
+}
+</code></pre>
+<p>对应地也有 <code>client-only</code> 用于标记浏览器专属的模块。</p>
+</div></article><article class="c-chapter-content multi-lang-pane" data-lang="zh_Hant_HK"><div class="mark-down code-content"><h1>伺服器與客戶端元件</h1>
+<p>App Router 中，佈局與頁面預設都是 <strong>伺服器元件（Server Components）</strong>。它們在伺服器上執行，可直接存取資料庫、使用密鑰，並把極少量 JavaScript 傳到瀏覽器。需要互動時，再加入 <strong>客戶端元件（Client Components）</strong>。</p>
+<h2>何時選哪一種？</h2>
+<p><strong>選伺服器元件</strong>：</p>
+<ul>
+<li>在資料來源附近取得資料（資料庫、API）。</li>
+<li>使用 API Key、Token 等不能暴露給客戶端的機密。</li>
+<li>減少送到瀏覽器的 JS，優化 FCP。</li>
+<li>漸進式串流輸出。</li>
+</ul>
+<p><strong>選客戶端元件</strong>：</p>
+<ul>
+<li>需要 <code>useState</code>、<code>useEffect</code> 等 hooks。</li>
+<li>需要瀏覽器 API（<code>localStorage</code>、<code>window</code>、<code>Navigator.geolocation</code>）。</li>
+<li>監聽 <code>onClick</code>、<code>onChange</code> 等事件。</li>
+</ul>
+<h2>在 Next.js 中如何運作？</h2>
+<p><strong>伺服器端</strong>：</p>
+<ul>
+<li>伺服器元件會被渲染成一種特殊的資料格式：<strong>RSC Payload</strong>。</li>
+<li>它與客戶端元件的佔位符一起，在伺服器端拼出首屏 HTML。</li>
+</ul>
+<p><strong>客戶端首次載入</strong>：</p>
+<ol>
+<li>HTML 立即呈現一個非互動預覽。</li>
+<li>RSC Payload 協調伺服器／客戶端元件樹。</li>
+<li>JavaScript 載入並 <strong>水合</strong> 客戶端元件，令頁面可互動。</li>
+</ol>
+<p><strong>後續導航</strong>：</p>
+<ul>
+<li>RSC Payload 會被預取並快取，切換瞬間完成。</li>
+<li>客戶端元件完全在瀏覽器中渲染。</li>
+</ul>
+<h2>撰寫一個客戶端元件</h2>
+<p>在檔案頂部加上 <code>'use client'</code> 指令：</p>
+<pre><code class="language-tsx">'use client';
+
+import { useState } from 'react';
+
+export default function Counter() {
+  const [n, setN] = useState(0);
+  return (
+    &lt;div&gt;
+      &lt;p&gt;{n} 次點擊&lt;/p&gt;
+      &lt;button onClick={() =&gt; setN(n + 1)}&gt;點我&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<p><code>'use client'</code> 聲明了一條分界線：自此檔案起，所有的 import 皆屬於客戶端 bundle，不必每個檔案都重寫指令。</p>
+<h2>縮小 JS 體積的竅門</h2>
+<p><strong>把 <code>'use client'</code> 放在盡可能小的葉子元件上</strong>，而不是整塊頁面：</p>
+<pre><code class="language-tsx">// 佈局：伺服器元件
+import Search from './search';   // 客戶端元件
+import Logo from './logo';       // 伺服器元件
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    &lt;&gt;
+      &lt;nav&gt;
+        &lt;Logo /&gt;
+        &lt;Search /&gt;
+      &lt;/nav&gt;
+      &lt;main&gt;{children}&lt;/main&gt;
+    &lt;/&gt;
+  );
+}
+</code></pre>
+<p>整個佈局仍然是伺服器元件，只有 <code>Search</code> 是客戶端 JS。</p>
+<h2>從伺服器傳遞資料到客戶端</h2>
+<p>直接用 props 即可（props 必須可序列化）：</p>
+<pre><code class="language-tsx">// 伺服器元件
+import LikeButton from '@/app/ui/like-button';
+import { getPost } from '@/lib/data';
+
+export default async function Page({
+  params,
+}: {
+  params: Promise&lt;{ id: string }&gt;;
+}) {
+  const { id } = await params;
+  const post = await getPost(id);
+  return &lt;LikeButton likes={post.likes} /&gt;;
+}
+</code></pre>
+<pre><code class="language-tsx">// 客戶端元件
+'use client';
+export default function LikeButton({ likes }: { likes: number }) {
+  // ...
+}
+</code></pre>
+<h2>在客戶端元件內嵌套伺服器元件</h2>
+<p>客戶端元件不能直接 <code>import</code> 伺服器元件，但可以透過 <strong>children 插槽</strong> 將它傳進來：</p>
+<pre><code class="language-tsx">// 客戶端元件：Modal
+'use client';
+export default function Modal({ children }: { children: React.ReactNode }) {
+  return &lt;div className=&quot;modal&quot;&gt;{children}&lt;/div&gt;;
+}
+</code></pre>
+<pre><code class="language-tsx">// 伺服器元件：Page
+import Modal from './ui/modal';
+import Cart from './ui/cart'; // 伺服器元件
+
+export default function Page() {
+  return (
+    &lt;Modal&gt;
+      &lt;Cart /&gt;
+    &lt;/Modal&gt;
+  );
+}
+</code></pre>
+<p>這種「客戶端外殼 + 伺服器內容」的組合非常常見。</p>
+<h2>Context Provider</h2>
+<p>React Context 不被伺服器元件支援。把 Provider 封成客戶端元件，在根佈局中使用：</p>
+<pre><code class="language-tsx">'use client';
+import { createContext } from 'react';
+
+export const ThemeContext = createContext({});
+
+export default function ThemeProvider({ children }: { children: React.ReactNode }) {
+  return &lt;ThemeContext.Provider value=&quot;dark&quot;&gt;{children}&lt;/ThemeContext.Provider&gt;;
+}
+</code></pre>
+<h2>防止「環境污染」</h2>
+<p>伺服器程式碼可能被意外 import 至客戶端。用 <code>server-only</code> 套件在建置期拋出錯誤：</p>
+<pre><code class="language-ts">import 'server-only';
+
+export async function getData() {
+  const res = await fetch('https://external-service.com/data', {
+    headers: { authorization: process.env.API_KEY },
+  });
+  return res.json();
+}
+</code></pre>
+<p>對應也有 <code>client-only</code> 用於標記瀏覽器專屬模組。</p>
+</div></article><article class="c-chapter-content multi-lang-pane" data-lang="en_US"><div class="mark-down code-content"><h1>Server and Client Components</h1>
+<p>In the App Router, layouts and pages are <strong>Server Components</strong> by default. They run on the server, can reach databases and secrets directly, and ship very little JavaScript to the browser. When you need interactivity, you layer in <strong>Client Components</strong>.</p>
+<h2>When to use each</h2>
+<p><strong>Server Components</strong> — use when you need to:</p>
+<ul>
+<li>Fetch data close to its source (databases, APIs).</li>
+<li>Use API keys, tokens, and other secrets.</li>
+<li>Reduce client JS and improve First Contentful Paint.</li>
+<li>Stream content progressively.</li>
+</ul>
+<p><strong>Client Components</strong> — use when you need:</p>
+<ul>
+<li>Hooks like <code>useState</code>, <code>useEffect</code>.</li>
+<li>Browser-only APIs (<code>localStorage</code>, <code>window</code>, <code>Navigator.geolocation</code>).</li>
+<li>Event handlers like <code>onClick</code>, <code>onChange</code>.</li>
+</ul>
+<h2>How do they work in Next.js?</h2>
+<p><strong>On the server</strong>:</p>
+<ul>
+<li>Server Components render into a special data format called the <strong>RSC Payload</strong>.</li>
+<li>Together with placeholders for Client Components, it's used to produce the initial HTML.</li>
+</ul>
+<p><strong>On the client (first load)</strong>:</p>
+<ol>
+<li>HTML shows a fast, non-interactive preview.</li>
+<li>The RSC Payload reconciles the Server and Client trees.</li>
+<li>JavaScript <strong>hydrates</strong> Client Components to make the page interactive.</li>
+</ol>
+<p><strong>Subsequent navigations</strong>:</p>
+<ul>
+<li>The RSC Payload is prefetched and cached for instant transitions.</li>
+<li>Client Components render entirely in the browser.</li>
+</ul>
+<h2>Writing a Client Component</h2>
+<p>Add the <code>'use client'</code> directive at the top of the file:</p>
+<pre><code class="language-tsx">'use client';
+
+import { useState } from 'react';
+
+export default function Counter() {
+  const [n, setN] = useState(0);
+  return (
+    &lt;div&gt;
+      &lt;p&gt;{n} clicks&lt;/p&gt;
+      &lt;button onClick={() =&gt; setN(n + 1)}&gt;Click me&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<p><code>'use client'</code> declares a boundary: from this file onwards, all imports are part of the client bundle — you don't need the directive in every file.</p>
+<h2>Keep bundles lean</h2>
+<p><strong>Push <code>'use client'</code> as deep as possible.</strong> Mark only the interactive leaves, not whole pages:</p>
+<pre><code class="language-tsx">// Layout: Server Component
+import Search from './search';   // Client Component
+import Logo from './logo';       // Server Component
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    &lt;&gt;
+      &lt;nav&gt;
+        &lt;Logo /&gt;
+        &lt;Search /&gt;
+      &lt;/nav&gt;
+      &lt;main&gt;{children}&lt;/main&gt;
+    &lt;/&gt;
+  );
+}
+</code></pre>
+<p>The layout remains a Server Component; only <code>Search</code> ships as client JS.</p>
+<h2>Passing data from Server to Client</h2>
+<p>Just use props — they must be serializable by React:</p>
+<pre><code class="language-tsx">// Server Component
+import LikeButton from '@/app/ui/like-button';
+import { getPost } from '@/lib/data';
+
+export default async function Page({
+  params,
+}: {
+  params: Promise&lt;{ id: string }&gt;;
+}) {
+  const { id } = await params;
+  const post = await getPost(id);
+  return &lt;LikeButton likes={post.likes} /&gt;;
+}
+</code></pre>
+<pre><code class="language-tsx">// Client Component
+'use client';
+export default function LikeButton({ likes }: { likes: number }) {
+  // ...
+}
+</code></pre>
+<h2>Interleaving: Server inside Client</h2>
+<p>Client Components can't <code>import</code> Server Components directly, but they can receive them as <code>children</code>:</p>
+<pre><code class="language-tsx">// Client Component: Modal
+'use client';
+export default function Modal({ children }: { children: React.ReactNode }) {
+  return &lt;div className=&quot;modal&quot;&gt;{children}&lt;/div&gt;;
+}
+</code></pre>
+<pre><code class="language-tsx">// Server Component: Page
+import Modal from './ui/modal';
+import Cart from './ui/cart'; // Server Component
+
+export default function Page() {
+  return (
+    &lt;Modal&gt;
+      &lt;Cart /&gt;
+    &lt;/Modal&gt;
+  );
+}
+</code></pre>
+<p>This &quot;client shell, server content&quot; pattern is everywhere in practice.</p>
+<h2>Context providers</h2>
+<p>React Context isn't supported in Server Components. Wrap providers in a Client Component and mount them from the root layout:</p>
+<pre><code class="language-tsx">'use client';
+import { createContext } from 'react';
+
+export const ThemeContext = createContext({});
+
+export default function ThemeProvider({ children }: { children: React.ReactNode }) {
+  return &lt;ThemeContext.Provider value=&quot;dark&quot;&gt;{children}&lt;/ThemeContext.Provider&gt;;
+}
+</code></pre>
+<h2>Preventing environment poisoning</h2>
+<p>Server code can accidentally be imported into the client. Use the <code>server-only</code> package to fail the build when that happens:</p>
+<pre><code class="language-ts">import 'server-only';
+
+export async function getData() {
+  const res = await fetch('https://external-service.com/data', {
+    headers: { authorization: process.env.API_KEY },
+  });
+  return res.json();
+}
+</code></pre>
+<p><code>client-only</code> is the counterpart for browser-only modules.</p>
+</div></article><!--]--></div><div class="c-chapter-nav" data-v-0a101b04><a href="/books/nextjs/05-linking-and-navigating" class="nav-link nav-prev u-cartoon-box" data-v-0a101b04><i class="iconfont icon-arrow_left text-12" data-v-0a101b04></i><div class="nav-label" data-v-0a101b04><span class="nav-hint" data-v-0a101b04>Previous Chapter</span><span class="nav-title" data-v-0a101b04>Linking and Navigating</span></div></a><a href="/books/nextjs/07-rendering" class="nav-link nav-next u-cartoon-box" data-v-0a101b04><div class="nav-label" data-v-0a101b04><span class="nav-hint" data-v-0a101b04>Next Chapter</span><span class="nav-title" data-v-0a101b04>Rendering Modes</span></div><i class="iconfont icon-arrow_right text-12" data-v-0a101b04></i></a></div></div></div><button class="sidebar-toggle"><i class="iconfont icon-caidan text-18"></i></button><!----></div><!--]--></main><div class="c-footer"><div class="common-footer-inner"><div class="logo-contract"><a href="/" class="inline-flex space-x-8 items-center"><div class="sub-logo"><svg t="1696732448231" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6740" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30"><defs><linearGradient id="left-to-right"><stop offset="0" stop-color="#ed3da1"><animate dur="3s" attributeName="offset" fill="freeze" values="-1;2;0" repeatCount="indefinite"></animate></stop><stop offset="0" stop-color="#ffe9f6"><animate dur="3s" attributeName="offset" fill="freeze" values="-1;2;0" repeatCount="indefinite"></animate></stop></linearGradient></defs><path d="M105.321374 914.265136c-11.700669 0-17.551004-11.702475-17.551003-17.541972 0-5.870203 5.850335-17.551004 11.7097-17.551004 269.155125-111.194286 561.722425-169.684988 848.441196-181.3983v5.839497c23.410369 0 52.662042-5.839497 76.076024-5.839497v11.711506c-292.558269 29.251673-579.284266 87.756824-854.300562 175.535323-17.551004 17.541972-40.964985 23.403144-64.375355 29.244447zM772.382332 580.741882c-29.260704 0-58.514183-5.861172-76.054349-29.240835-17.55281-23.412175-35.123682-46.826157-35.123681-76.079636 0-81.917327 23.403144-157.984319 76.068798-222.350642 46.835188-64.377161 117.042815-111.168999 193.106195-140.433316 29.251673 0 52.654817 17.563647 64.368129 40.954148-5.862978 5.850335-11.711506 11.711506-17.563647 11.711506 29.251673 11.700669 40.952342 35.102007 40.952342 64.366324 5.862978 163.834654-99.459299 310.121916-245.753787 351.072451z m157.996963-374.484627c-11.702475 5.850335-29.273347 17.551004-40.954148 29.264316-5.870203 0-5.870203-5.850335-5.870203-11.711506-87.778499 52.665654-146.281844 146.294487-152.114116 245.742949 0 11.711506 5.832272 52.665654 23.38147 46.835188 29.284184-11.7097 52.662042-23.423013 70.225688-46.835188 19.503523-21.441593 39.00524-42.894024 58.506958-64.344648 35.121876-46.81532 58.535857-105.320471 70.216658-163.847297 11.700669-17.55281-5.848528-29.253479-23.392307-35.103814zM122.872378 288.185419l-64.366323 29.251673c-5.839497 5.839497-11.689832 5.839497-17.540167 5.839497-5.862978 0-5.862978-11.713313-5.862978-17.540166 0-17.551004 11.713313-29.264316 29.273347-35.114651 35.103813-29.264316 70.20582-52.654817 111.158163-70.216657 17.551004 5.850335 29.264316 23.403144 35.11465 40.952341 0 17.540166 0 17.540166-81.919133 204.812282-29.249866 58.505151-52.651204 122.873281-58.523213 187.237798 0 5.852141 5.872009 17.55281 5.872009 23.412176v5.841303c-1.959745 1.948907-3.910458 3.912264-5.872009 5.861172-5.830466 0-11.700669 0-11.700669-5.861172-29.253479 0-52.663848-17.55281-58.505152-46.804482 0-46.813513 11.711506-99.470137 29.251673-140.433316 23.413982-64.366323 58.517795-122.871475 93.619802-187.237798zM637.792126 282.326054c11.700669 157.984319-87.760436 298.417635-239.892614 339.380813-29.264316 0-58.515989-5.850335-76.07783-29.264316-23.401338-17.561841-35.092976-46.813513-35.092976-76.056155 0-81.926358 23.403144-157.99335 76.068798-222.359673 46.804482-64.355486 117.008497-111.159968 193.086327-140.433316 29.242642 0 52.665654 17.551004 64.368129 40.975823-5.852141 5.839497-11.702475 11.689832-17.55281 11.689832 17.551004 17.549197 35.092976 46.811707 35.092976 76.066992z m-81.908295-35.103814c-11.7097 5.850335-29.260704 17.551004-40.963179 29.251673-5.850335 0-5.850335-5.850335-5.850335-11.700669-87.769468 52.665654-146.272813 146.28365-152.135791 245.762818 0 11.680801 5.862978 52.663848 23.413982 46.793645 29.251673-11.702475 52.665654-23.403144 70.20582-46.793645a140273.571944 140273.571944 0 0 0 58.515989-64.366324c35.103813-46.826157 58.514183-105.320471 70.214852-163.84549 11.713313-17.551004-5.839497-29.253479-23.401338-35.102008zM23.414885 808.944665c269.155125-111.170806 561.711587-169.684988 848.437584-181.3983v5.859365c29.251673 0 52.665654-5.859366 76.068798-5.859365v11.711506c-292.558269 29.26251-579.287878 87.778499-854.302368 175.544354-23.413982 11.713313-40.954148 17.554616-64.36813 23.3905h-5.837691c-5.872009 0-11.702475-5.835885-11.702475-17.551003 3.903233-3.896009 7.804661-7.797436 11.704282-11.697057z" fill="url(#left-to-right)" p-id="6741" class="logo-path"></path></svg></div><img class="h-50" src="/logo.svg"></a><div class="contacts"><!--[--><a class="contact-item" href="mailto:yldiswinter@gmail.com"><i class="iconfont icon-youxiang"></i></a><a class="contact-item" href="https://github.com/WinterMain"><i class="iconfont icon-github"></i></a><!--]--></div></div><div class="nav-area"><div class="pr-20"><p class="label"><span class="z-1">LINKS</span></p></div><div class="nav-items"><!--[--><!--[--><a href="/question" class="nav-item">Question</a><!--]--><!--[--><a href="/blog" class="nav-item">Blog</a><!--]--><!--[--><a href="/message" class="nav-item">Message</a><!--]--><!--[--><a class="nav-item" target="_blank" rel="noopener noreferrer" href="https://tools.winter100.com">Toolbox</a><!--]--><!--]--></div></div><div class="donate-area"><div class="pr-20"><p class="label"><span class="z-1">DONATE</span></p></div><div class="donate-list"><!--[--><div class="donate-item"><div class="c-common-qrcode"><canvas style="width:60px;height:60px;"></canvas></div><div class="ml-12"><div class="flex items-center mt-4"><img src="/images/btc.png" height="30" class="h-20"><span class="ml-8 text-primary font-w500 text-16 flex-1">BTC</span><!--[--><span class="c-copy el-tooltip__trigger el-tooltip__trigger"><i class="el-icon text-12" style=""><!--[--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M768 832a128 128 0 0 1-128 128H192A128 128 0 0 1 64 832V384a128 128 0 0 1 128-128v64a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64z"></path><path fill="currentColor" d="M384 128a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64V192a64 64 0 0 0-64-64zm0-64h448a128 128 0 0 1 128 128v448a128 128 0 0 1-128 128H384a128 128 0 0 1-128-128V192A128 128 0 0 1 384 64"></path></svg><!--]--></i></span><!--teleport start--><!--teleport end--><!--]--></div><p class="mt-12 text-addr"><span class="">1Q6ZDFC3FueXY3JocmeMqgiSsGGtppbvz2</span></p></div></div><div class="donate-item"><div class="c-common-qrcode"><canvas style="width:60px;height:60px;"></canvas></div><div class="ml-12"><div class="flex items-center mt-4"><img src="/images/eth.png" height="30" class="h-20"><span class="ml-8 text-primary font-w500 text-16 flex-1">ETH</span><!--[--><span class="c-copy el-tooltip__trigger el-tooltip__trigger"><i class="el-icon text-12" style=""><!--[--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M768 832a128 128 0 0 1-128 128H192A128 128 0 0 1 64 832V384a128 128 0 0 1 128-128v64a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64z"></path><path fill="currentColor" d="M384 128a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64V192a64 64 0 0 0-64-64zm0-64h448a128 128 0 0 1 128 128v448a128 128 0 0 1-128 128H384a128 128 0 0 1-128-128V192A128 128 0 0 1 384 64"></path></svg><!--]--></i></span><!--teleport start--><!--teleport end--><!--]--></div><p class="mt-12 text-addr"><span class="">0xff6FC30033269845d196cB48F6a0660598D218D8</span></p></div></div><!--]--></div></div><div class="flex-1 ml-20 flex justify-end xs:hidden"><div class="c-adsense mt-0"><div class="ad-container" style="background-image:url(/images/adsenseWinter.svg);"><!----></div></div></div></div></div><!--v-if--><!--]--></section><!--]--></div><div id="teleports"></div><script type="application/json" data-nuxt-data="nuxt-app" data-ssr id="__NUXT_DATA__" data-src="/books/nextjs/06-server-and-client-components/_payload.json?adf5c24d-6909-4c89-9550-b77b1bc7d41e">[{"state":1,"once":7,"_errors":8,"serverRendered":10,"path":11,"pinia":12,"prerenderedAt":43},["Reactive",2],{"$ssite-config":3},{"env":4,"name":5,"url":6},"production","Winter 100分","https://winter100.com/",["Set"],["ShallowReactive",9],{},true,"/books/nextjs/06-server-and-client-components",["Reactive",13],{"lang":14,"main":27},{"langOptions":15,"lang":24,"defaultLang":24},[16,20,23],{"val":17,"text":18,"icon":19},"zh_Hans_CN","简体中文","/images/cn.svg",{"val":21,"text":22,"icon":19},"zh_Hant_HK","繁体中文",{"val":24,"text":25,"icon":26},"en_US","English","/images/en.svg",{"category":28,"nav":29,"likes":30,"donateCoins":31},"browserplugin","all",[],[32,36,40],{"coin":33,"address":34,"icon":35},"BTC","1Q6ZDFC3FueXY3JocmeMqgiSsGGtppbvz2","/images/btc.png",{"coin":37,"address":38,"icon":39},"ETH","0xff6FC30033269845d196cB48F6a0660598D218D8","/images/eth.png",{"coin":41,"address":38,"icon":42},"CET","/images/cet.png",1777973623181]</script>
+<script>window.__NUXT__={};window.__NUXT__.config={public:{MODE:"",NODE_ENV:"production",NAME:"winter100"},app:{baseURL:"/",buildId:"adf5c24d-6909-4c89-9550-b77b1bc7d41e",buildAssetsDir:"/_nuxt/",cdnURL:""}}</script></body></html>

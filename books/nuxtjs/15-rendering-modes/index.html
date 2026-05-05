@@ -1,0 +1,411 @@
+<!DOCTYPE html><html  data-capo=""><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Rendering Modes - Nuxt.js in Action - Winter100</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ1S1HBYLX"></script>
+<link rel="stylesheet" type="text/css" href="/iconfont/iconfont.css?t=20240930">
+<link rel="stylesheet" href="/_nuxt/entry.CfkJKbr-.css">
+<link rel="stylesheet" href="/_nuxt/default.CerbM5oS.css">
+<link rel="stylesheet" href="/_nuxt/_chapter_.bM-96XUK.css">
+<link rel="preload" as="fetch" crossorigin="anonymous" href="/books/nuxtjs/15-rendering-modes/_payload.json?adf5c24d-6909-4c89-9550-b77b1bc7d41e">
+<script src="/_nuxt/Bni5rCE1-legacy.js" nomodule crossorigin></script>
+<script src="/_nuxt/CoLxJWwc-legacy.js" nomodule crossorigin></script>
+<link rel="icon" type="image/x-icon" href="/favicon.ico?t=20260104">
+<script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-KZ1S1HBYLX');
+</script>
+<meta property="og:image" content="/slogan.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="zh-hans" href="https://winter100.com/books/nuxtjs/15-rendering-modes?lang=zh_Hans_CN">
+<link rel="alternate" hreflang="zh-hant" href="https://winter100.com/books/nuxtjs/15-rendering-modes?lang=zh_Hant_HK">
+<link rel="alternate" hreflang="en" href="https://winter100.com/books/nuxtjs/15-rendering-modes?lang=en_US">
+<link rel="canonical" href="https://winter100.com/books/nuxtjs/15-rendering-modes">
+<meta name="og:title" content="Rendering Modes - Nuxt.js in Action - Winter100">
+<meta name="keywords" content="Winter100, WinterCCC, 100 points, blockchain, question and answer, tool, comment, reply, storage, permanent, blockchain wisdom, question and answer fun, 100-point project, toolbox, blog, technology">
+<meta name="description" content="Master Nuxt 4 full-stack development end-to-end">
+<meta name="og:description" content="Master Nuxt 4 full-stack development end-to-end">
+<script type="module" src="/_nuxt/DB7QiDPZ.js" crossorigin></script></head><body><div id="el-popper-container-1024"><!--teleport start anchor--><!--[--><div style="z-index:2001;position:absolute;left:0;top:0;width:140px;display:none;" class="el-popper is-light el-popover c-lang-legal-popover" tabindex="-1" aria-hidden="true"><!--[--><!--[--><!--[--><!--[--><!--v-if--><!--[--><div class="c-lang-legal-box"><div class="c-contain"><ul class="c-list"><!--[--><li class="item-list false"><img src="/images/cn.svg" class="c-lang-legal-flag" alt><div class="flex-shrink-0">简体中文</div></li><li class="item-list false"><img src="/images/cn.svg" class="c-lang-legal-flag" alt><div class="flex-shrink-0">繁体中文</div></li><li class="item-list list-item-active"><img src="/images/en.svg" class="c-lang-legal-flag" alt><div class="flex-shrink-0">English</div></li><!--]--></ul></div></div><!--]--><!--]--><span class="el-popper__arrow" style="position:absolute;" data-popper-arrow></span><!--]--><!--]--><!--]--></div><!--]--><!--teleport anchor--><!--teleport start anchor--><!--[--><!--v-if--><!--]--><!--teleport anchor--><!--teleport start anchor--><!--[--><!--v-if--><!--]--><!--teleport anchor--></div><div id="__nuxt"><!--[--><section class="el-container is-vertical l-home"><!--[--><div class="nuxt-loading-indicator" style="position:fixed;top:0;right:0;left:0;pointer-events:none;width:auto;height:3px;opacity:0;background:repeating-linear-gradient(to right,#00dc82 0%,#34cdfe 50%,#0047e1 100%);background-size:Infinity% auto;transform:scaleX(0%);transform-origin:left;transition:transform 0.1s, height 0.4s, opacity 0.4s;z-index:999999;"></div><!--[--><!----><!--]--><!--[--><!----><!--]--><div class="c-common-header"><header class="el-header c-common-header-inner" style=""><!--[--><a href="/" class="flex space-x-8 items-center"><div class="sub-logo"><svg t="1696732448231" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6740" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30"><defs><linearGradient id="left-to-right"><stop offset="0" stop-color="#ed3da1"><animate dur="3s" attributeName="offset" fill="freeze" values="-1;2;0" repeatCount="indefinite"></animate></stop><stop offset="0" stop-color="#ffe9f6"><animate dur="3s" attributeName="offset" fill="freeze" values="-1;2;0" repeatCount="indefinite"></animate></stop></linearGradient></defs><path d="M105.321374 914.265136c-11.700669 0-17.551004-11.702475-17.551003-17.541972 0-5.870203 5.850335-17.551004 11.7097-17.551004 269.155125-111.194286 561.722425-169.684988 848.441196-181.3983v5.839497c23.410369 0 52.662042-5.839497 76.076024-5.839497v11.711506c-292.558269 29.251673-579.284266 87.756824-854.300562 175.535323-17.551004 17.541972-40.964985 23.403144-64.375355 29.244447zM772.382332 580.741882c-29.260704 0-58.514183-5.861172-76.054349-29.240835-17.55281-23.412175-35.123682-46.826157-35.123681-76.079636 0-81.917327 23.403144-157.984319 76.068798-222.350642 46.835188-64.377161 117.042815-111.168999 193.106195-140.433316 29.251673 0 52.654817 17.563647 64.368129 40.954148-5.862978 5.850335-11.711506 11.711506-17.563647 11.711506 29.251673 11.700669 40.952342 35.102007 40.952342 64.366324 5.862978 163.834654-99.459299 310.121916-245.753787 351.072451z m157.996963-374.484627c-11.702475 5.850335-29.273347 17.551004-40.954148 29.264316-5.870203 0-5.870203-5.850335-5.870203-11.711506-87.778499 52.665654-146.281844 146.294487-152.114116 245.742949 0 11.711506 5.832272 52.665654 23.38147 46.835188 29.284184-11.7097 52.662042-23.423013 70.225688-46.835188 19.503523-21.441593 39.00524-42.894024 58.506958-64.344648 35.121876-46.81532 58.535857-105.320471 70.216658-163.847297 11.700669-17.55281-5.848528-29.253479-23.392307-35.103814zM122.872378 288.185419l-64.366323 29.251673c-5.839497 5.839497-11.689832 5.839497-17.540167 5.839497-5.862978 0-5.862978-11.713313-5.862978-17.540166 0-17.551004 11.713313-29.264316 29.273347-35.114651 35.103813-29.264316 70.20582-52.654817 111.158163-70.216657 17.551004 5.850335 29.264316 23.403144 35.11465 40.952341 0 17.540166 0 17.540166-81.919133 204.812282-29.249866 58.505151-52.651204 122.873281-58.523213 187.237798 0 5.852141 5.872009 17.55281 5.872009 23.412176v5.841303c-1.959745 1.948907-3.910458 3.912264-5.872009 5.861172-5.830466 0-11.700669 0-11.700669-5.861172-29.253479 0-52.663848-17.55281-58.505152-46.804482 0-46.813513 11.711506-99.470137 29.251673-140.433316 23.413982-64.366323 58.517795-122.871475 93.619802-187.237798zM637.792126 282.326054c11.700669 157.984319-87.760436 298.417635-239.892614 339.380813-29.264316 0-58.515989-5.850335-76.07783-29.264316-23.401338-17.561841-35.092976-46.813513-35.092976-76.056155 0-81.926358 23.403144-157.99335 76.068798-222.359673 46.804482-64.355486 117.008497-111.159968 193.086327-140.433316 29.242642 0 52.665654 17.551004 64.368129 40.975823-5.852141 5.839497-11.702475 11.689832-17.55281 11.689832 17.551004 17.549197 35.092976 46.811707 35.092976 76.066992z m-81.908295-35.103814c-11.7097 5.850335-29.260704 17.551004-40.963179 29.251673-5.850335 0-5.850335-5.850335-5.850335-11.700669-87.769468 52.665654-146.272813 146.28365-152.135791 245.762818 0 11.680801 5.862978 52.663848 23.413982 46.793645 29.251673-11.702475 52.665654-23.403144 70.20582-46.793645a140273.571944 140273.571944 0 0 0 58.515989-64.366324c35.103813-46.826157 58.514183-105.320471 70.214852-163.84549 11.713313-17.551004-5.839497-29.253479-23.401338-35.102008zM23.414885 808.944665c269.155125-111.170806 561.711587-169.684988 848.437584-181.3983v5.859365c29.251673 0 52.665654-5.859366 76.068798-5.859365v11.711506c-292.558269 29.26251-579.287878 87.778499-854.302368 175.544354-23.413982 11.713313-40.954148 17.554616-64.36813 23.3905h-5.837691c-5.872009 0-11.702475-5.835885-11.702475-17.551003 3.903233-3.896009 7.804661-7.797436 11.704282-11.697057z" fill="url(#left-to-right)" p-id="6741" class="logo-path"></path></svg></div><img class="h-40" src="/logo.svg"></a><div class="nav-items"><!--[--><!--[--><a href="/" class="nav-item">Home</a><!--]--><!--[--><a href="/question" class="nav-item">Question</a><!--]--><!--[--><a href="/blog" class="nav-item">Blog</a><!--]--><!--[--><a href="/message" class="nav-item">Message</a><!--]--><!--[--><a href="/books" class="nav-item active">Books</a><!--]--><!--[--><a href="/toolbox" class="nav-item">Toolbox</a><!--]--><!--]--></div><div class="flex-1"></div><div class="c-lang-legal xs:hidden"><!--[--><span class="c-lang-legal-trigger el-tooltip__trigger el-tooltip__trigger"><img src="/images/en.svg" class="c-lang-legal-trigger-icon" alt> English <i class="el-icon c-lang-legal-trigger-caret" style=""><!--[--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="m192 384 320 384 320-384z"></path></svg><!--]--></i></span><!--teleport start--><!--teleport end--><!--]--></div><i class="iconfont icon-caidan text-theme hover:opacity-70 text-28 hidden xs:block"></i><!--]--></header><!----></div><main class="l-default-home"><!--[--><div class="p-book-chapter u-cartoon-page"><div class="u-cartoon-sky" aria-hidden="true"></div><div class="page-container pt-30 pb-60"><div class="c-aside"><div class="fixed-area"><aside class="c-books-sidebar u-cartoon-box u-cartoon-box--no-hover" data-v-52e6855c><div class="sidebar-header" data-v-52e6855c><a href="/books" class="sidebar-back" data-v-52e6855c><i class="iconfont icon-arrow_left text-12" data-v-52e6855c></i><span data-v-52e6855c>All Books</span></a></div><p class="side-title" data-v-52e6855c>Nuxt.js in Action</p><nav class="sidebar-nav" data-v-52e6855c><!--[--><a href="/books/nuxtjs/01-introduction" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>01</span><span data-v-52e6855c>Introduction to Nuxt</span></a><a href="/books/nuxtjs/02-installation" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>02</span><span data-v-52e6855c>Installation</span></a><a href="/books/nuxtjs/03-configuration" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>03</span><span data-v-52e6855c>Configuration</span></a><a href="/books/nuxtjs/04-views" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>04</span><span data-v-52e6855c>Views</span></a><a href="/books/nuxtjs/05-assets" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>05</span><span data-v-52e6855c>Assets</span></a><a href="/books/nuxtjs/06-styling" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>06</span><span data-v-52e6855c>Styling</span></a><a href="/books/nuxtjs/07-routing" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>07</span><span data-v-52e6855c>Routing</span></a><a href="/books/nuxtjs/08-seo-meta" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>08</span><span data-v-52e6855c>SEO and Meta</span></a><a href="/books/nuxtjs/09-transitions" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>09</span><span data-v-52e6855c>Transitions</span></a><a href="/books/nuxtjs/10-data-fetching" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>10</span><span data-v-52e6855c>Data Fetching</span></a><a href="/books/nuxtjs/11-state-management" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>11</span><span data-v-52e6855c>State Management</span></a><a href="/books/nuxtjs/12-error-handling" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>12</span><span data-v-52e6855c>Error Handling</span></a><a href="/books/nuxtjs/13-server" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>13</span><span data-v-52e6855c>Server with Nitro</span></a><a href="/books/nuxtjs/14-layers" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>14</span><span data-v-52e6855c>Layers</span></a><a aria-current="page" href="/books/nuxtjs/15-rendering-modes" class="router-link-active router-link-exact-active sidebar-item active" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>15</span><span data-v-52e6855c>Rendering Modes</span></a><a href="/books/nuxtjs/16-deployment" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>16</span><span data-v-52e6855c>Deployment</span></a><!--]--></nav></aside></div></div><div class="c-outer bg-white u-cartoon-box u-cartoon-box--no-hover"><div class="en_US multi-lang-stage"><!--[--><article class="c-chapter-content multi-lang-pane" data-lang="zh_Hans_CN"><div class="mark-down code-content"><h1>渲染模式</h1>
+<p>Nuxt 是“一个框架多种形态”：SSR、SSG、ISR、SWR、纯 CSR。通过 <code>routeRules</code> 按路由选择，Nitro 会把你的决定翻译成每个平台的原生能力。</p>
+<h2>四种模式</h2>
+<h3>SSR（服务端渲染）—— 默认</h3>
+<p>每次请求都在服务端渲染。适合：</p>
+<ul>
+<li>个性化页面（鉴权、账户、购物车）。</li>
+<li>随用户或请求变化的内容。</li>
+<li>对实时 SEO 有要求的页面。</li>
+</ul>
+<p>不用额外配置，你一开始就在这个模式里。</p>
+<h3>SSG（静态站点生成）—— <code>prerender</code></h3>
+<p>构建期渲染，直接发纯 HTML。适合：</p>
+<ul>
+<li>营销页、落地页。</li>
+<li>已知 slug 的文档、博客。</li>
+</ul>
+<pre><code class="language-bash">pnpm build &amp;&amp; pnpm preview
+# 或者纯静态托管：
+pnpm generate
+</code></pre>
+<p>按路由声明：</p>
+<pre><code class="language-ts">export default defineNuxtConfig({
+  routeRules: {
+    '/': { prerender: true },
+    '/about': { prerender: true },
+  },
+})
+</code></pre>
+<p><code>nuxt generate</code> 相当于对所有路由开启 <code>prerender</code>，并额外生成 <code>/200.html</code>、<code>/404.html</code> 作为 SPA fallback。</p>
+<h3>ISR（增量静态再生）—— <code>isr</code></h3>
+<p>先发缓存 HTML，过期后在后台重新生成。适合：</p>
+<ul>
+<li>流量大但内容偶尔更新的页面。</li>
+</ul>
+<pre><code class="language-ts">export default defineNuxtConfig({
+  routeRules: {
+    '/blog/**': { isr: 60 },        // 缓存 60 秒
+    '/docs/**': { isr: true },      // 缓存到下次发版
+  },
+})
+</code></pre>
+<p>平台支持：Vercel、Netlify、Cloudflare（视预设而定）。</p>
+<h3>SWR（stale-while-revalidate）—— <code>swr</code></h3>
+<p>思路跟 ISR 类似，但靠 HTTP 缓存头 / CDN 实现：</p>
+<pre><code class="language-ts">routeRules: {
+  '/feed': { swr: 30 },             // 30 秒内允许发旧内容
+}
+</code></pre>
+<h3>纯 CSR —— <code>ssr: false</code></h3>
+<p>完全跳过 SSR。适合：</p>
+<ul>
+<li>登录后访问的仪表板。</li>
+<li>首屏就依赖 <code>window</code> / <code>document</code> 的页面。</li>
+</ul>
+<pre><code class="language-ts">routeRules: {
+  '/admin/**': { ssr: false },
+}
+</code></pre>
+<p>想全站 CSR，全局关掉 SSR：</p>
+<pre><code class="language-ts">export default defineNuxtConfig({
+  ssr: false,
+})
+</code></pre>
+<p>再 <code>nuxt generate</code> 会得到一个 <code>index.html</code>，由它在客户端启动 Vue —— 经典 SPA。</p>
+<h2><code>routeRules</code> —— 决策集中在一起</h2>
+<p>一条规则可以组合多个关注点：</p>
+<pre><code class="language-ts">export default defineNuxtConfig({
+  routeRules: {
+    '/': { prerender: true },
+    '/blog/**': { swr: 3600, headers: { 'cache-control': 's-maxage=3600' } },
+    '/api/public/*': { cache: { maxAge: 300 } },
+    '/admin/**': { ssr: false, appMiddleware: 'auth' },
+    '/legacy': { redirect: { to: '/new', statusCode: 301 } },
+    '/proxy/**': { proxy: 'https://api.example.com/**' },
+  },
+})
+</code></pre>
+<p>可用 key：<code>prerender</code>、<code>isr</code>、<code>swr</code>、<code>ssr</code>、<code>cache</code>、<code>headers</code>、<code>redirect</code>、<code>proxy</code>、<code>noScripts</code>、<code>appMiddleware</code>。通配符：<code>*</code> 单段、<code>**</code> 多段。</p>
+<h2>静态托管 vs 混合托管</h2>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>输出</th>
+<th>托管位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>全 SSR</td>
+<td><code>.output/server/</code> + <code>public/</code></td>
+<td>Node、Vercel、Netlify、Cloudflare</td>
+</tr>
+<tr>
+<td>全 SSG（<code>nuxt generate</code>）</td>
+<td>只有 <code>.output/public/</code></td>
+<td>任意静态托管 + CDN</td>
+</tr>
+<tr>
+<td>混合（按路由）</td>
+<td>预渲染 + SSR 产物混合</td>
+<td>支持 ISR / SWR 的平台</td>
+</tr>
+<tr>
+<td>CSR（<code>ssr: false</code> + generate）</td>
+<td>静态 <code>index.html</code> + JS bundle</td>
+<td>任意静态托管</td>
+</tr>
+</tbody>
+</table>
+<h2>怎么选？</h2>
+<ul>
+<li><strong>登录后看板</strong> → SSR（没 SEO 需求可以 <code>ssr: false</code>）。</li>
+<li><strong>营销页</strong> → <code>prerender: true</code>。</li>
+<li><strong>博客 / 文档 / 目录</strong> → ISR 或 SWR。</li>
+<li><strong>自家 API</strong> → <code>/api/*</code> 加 <code>cache.maxAge</code>（幂等接口）。</li>
+<li><strong>重定向 / 代理</strong> → 走 <code>routeRules</code>，别自己写中间件。</li>
+</ul>
+<h2>易踩的坑</h2>
+<ul>
+<li><strong><code>noScripts: true</code></strong> 不会发 Nuxt 运行时 JS —— 做纯静态落地页香，交互页面慎用。</li>
+<li><strong>按路由 <code>ssr: false</code></strong> 也会在服务端构建外壳，客户端只 hydrate JS。</li>
+<li><strong><code>prerender</code> 动态路由</strong>需要爬虫提示或显式列表（<code>nitro.prerender.routes</code>）。</li>
+<li><strong>CDN 边缘</strong>场景下把 <code>swr</code> / <code>isr</code> 配上合适的 cache-control，体验会更顺。</li>
+</ul>
+<p>每条路由挑一种渲染模式，意图统一写在 <code>routeRules</code>，剩下的交给 Nitro。</p>
+</div></article><article class="c-chapter-content multi-lang-pane" data-lang="zh_Hant_HK"><div class="mark-down code-content"><h1>渲染模式</h1>
+<p>Nuxt 是「一個框架多種形態」：SSR、SSG、ISR、SWR、純 CSR。透過 <code>routeRules</code> 按路由選擇，Nitro 會將決定翻譯成各平台的原生能力。</p>
+<h2>四種模式</h2>
+<h3>SSR（伺服器渲染）—— 預設</h3>
+<p>每個請求皆於伺服器渲染。適合：</p>
+<ul>
+<li>個人化頁面（鑑權、帳戶、購物車）。</li>
+<li>隨使用者或請求變化的內容。</li>
+<li>對即時 SEO 有要求的頁面。</li>
+</ul>
+<p>不需額外設定，初始即為此模式。</p>
+<h3>SSG（靜態站點生成）—— <code>prerender</code></h3>
+<p>建置期渲染，直接傳送純 HTML。適合：</p>
+<ul>
+<li>行銷頁、著陸頁。</li>
+<li>已知 slug 的文件、部落格。</li>
+</ul>
+<pre><code class="language-bash">pnpm build &amp;&amp; pnpm preview
+# 或純靜態代管：
+pnpm generate
+</code></pre>
+<p>按路由宣告：</p>
+<pre><code class="language-ts">export default defineNuxtConfig({
+  routeRules: {
+    '/': { prerender: true },
+    '/about': { prerender: true },
+  },
+})
+</code></pre>
+<p><code>nuxt generate</code> 等同於對所有路由開啟 <code>prerender</code>，並額外產生 <code>/200.html</code>、<code>/404.html</code> 作為 SPA fallback。</p>
+<h3>ISR（增量靜態再生）—— <code>isr</code></h3>
+<p>先提供快取 HTML，過期後在背景重新產生。適合：</p>
+<ul>
+<li>流量高但內容偶爾更新的頁面。</li>
+</ul>
+<pre><code class="language-ts">export default defineNuxtConfig({
+  routeRules: {
+    '/blog/**': { isr: 60 },        // 快取 60 秒
+    '/docs/**': { isr: true },      // 快取至下次部署
+  },
+})
+</code></pre>
+<p>平台支援：Vercel、Netlify、Cloudflare（依預設而定）。</p>
+<h3>SWR（stale-while-revalidate）—— <code>swr</code></h3>
+<p>與 ISR 概念相近，但靠 HTTP 快取標頭／CDN 實作：</p>
+<pre><code class="language-ts">routeRules: {
+  '/feed': { swr: 30 },             // 30 秒內允許提供舊內容
+}
+</code></pre>
+<h3>純 CSR —— <code>ssr: false</code></h3>
+<p>完全跳過 SSR。適合：</p>
+<ul>
+<li>登入後的儀表板。</li>
+<li>首屏即依賴 <code>window</code>／<code>document</code> 的頁面。</li>
+</ul>
+<pre><code class="language-ts">routeRules: {
+  '/admin/**': { ssr: false },
+}
+</code></pre>
+<p>若整站 CSR，全域關閉 SSR：</p>
+<pre><code class="language-ts">export default defineNuxtConfig({
+  ssr: false,
+})
+</code></pre>
+<p>再執行 <code>nuxt generate</code> 會得到 <code>index.html</code>，由它在客戶端啟動 Vue —— 即經典 SPA。</p>
+<h2><code>routeRules</code> —— 決策集中於一處</h2>
+<p>一條規則可組合多個關注點：</p>
+<pre><code class="language-ts">export default defineNuxtConfig({
+  routeRules: {
+    '/': { prerender: true },
+    '/blog/**': { swr: 3600, headers: { 'cache-control': 's-maxage=3600' } },
+    '/api/public/*': { cache: { maxAge: 300 } },
+    '/admin/**': { ssr: false, appMiddleware: 'auth' },
+    '/legacy': { redirect: { to: '/new', statusCode: 301 } },
+    '/proxy/**': { proxy: 'https://api.example.com/**' },
+  },
+})
+</code></pre>
+<p>可用 key：<code>prerender</code>、<code>isr</code>、<code>swr</code>、<code>ssr</code>、<code>cache</code>、<code>headers</code>、<code>redirect</code>、<code>proxy</code>、<code>noScripts</code>、<code>appMiddleware</code>。萬用字元：<code>*</code> 單段、<code>**</code> 多段。</p>
+<h2>靜態代管 vs 混合代管</h2>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>輸出</th>
+<th>代管位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>全 SSR</td>
+<td><code>.output/server/</code> + <code>public/</code></td>
+<td>Node、Vercel、Netlify、Cloudflare</td>
+</tr>
+<tr>
+<td>全 SSG（<code>nuxt generate</code>）</td>
+<td>僅 <code>.output/public/</code></td>
+<td>任意靜態代管 + CDN</td>
+</tr>
+<tr>
+<td>混合（按路由）</td>
+<td>預渲染 + SSR 產物混合</td>
+<td>支援 ISR／SWR 的平台</td>
+</tr>
+<tr>
+<td>CSR（<code>ssr: false</code> + generate）</td>
+<td>靜態 <code>index.html</code> + JS bundle</td>
+<td>任意靜態代管</td>
+</tr>
+</tbody>
+</table>
+<h2>如何抉擇？</h2>
+<ul>
+<li><strong>登入後儀表板</strong> → SSR（無 SEO 需求可設 <code>ssr: false</code>）。</li>
+<li><strong>行銷頁</strong> → <code>prerender: true</code>。</li>
+<li><strong>部落格／文件／目錄</strong> → ISR 或 SWR。</li>
+<li><strong>自家 API</strong> → <code>/api/*</code> 搭配 <code>cache.maxAge</code>（冪等端點）。</li>
+<li><strong>重定向／代理</strong> → 走 <code>routeRules</code>，勿自行撰寫中介層。</li>
+</ul>
+<h2>常見陷阱</h2>
+<ul>
+<li><strong><code>noScripts: true</code></strong> 不會輸出 Nuxt 執行時 JS —— 純靜態著陸頁很好，但互動頁面請慎用。</li>
+<li><strong>按路由 <code>ssr: false</code></strong> 仍會於伺服器端建置外殼，客戶端僅 hydrate JS。</li>
+<li><strong><code>prerender</code> 動態路由</strong>需爬蟲提示或明確清單（<code>nitro.prerender.routes</code>）。</li>
+<li><strong>CDN 邊緣</strong>場景下為 <code>swr</code>／<code>isr</code> 配合適當 cache-control，體驗更佳。</li>
+</ul>
+<p>每條路由挑一種渲染模式，意圖統一寫於 <code>routeRules</code>，其餘交給 Nitro。</p>
+</div></article><article class="c-chapter-content multi-lang-pane" data-lang="en_US"><div class="mark-down code-content"><h1>Rendering Modes</h1>
+<p>Nuxt is one framework with many rendering shapes: SSR, SSG, ISR, SWR, CSR-only. You pick per route via <code>routeRules</code>, and Nitro translates your choice into platform-native behavior.</p>
+<h2>The four modes</h2>
+<h3>SSR (Server-Side Rendering) — the default</h3>
+<p>Every request is rendered on the server. Best for:</p>
+<ul>
+<li>Personalized pages (auth, account, cart).</li>
+<li>Content that changes by user or request context.</li>
+<li>Pages where SEO of fresh data matters.</li>
+</ul>
+<p>No special config needed — you're already here.</p>
+<h3>SSG (Static Site Generation) — <code>prerender</code></h3>
+<p>Render at build time, serve pure HTML. Best for:</p>
+<ul>
+<li>Marketing pages, landing pages.</li>
+<li>Docs and blog posts with known slugs.</li>
+</ul>
+<pre><code class="language-bash">pnpm build &amp;&amp; pnpm preview
+# or for fully static hosting:
+pnpm generate
+</code></pre>
+<p>Per-route:</p>
+<pre><code class="language-ts">export default defineNuxtConfig({
+  routeRules: {
+    '/': { prerender: true },
+    '/about': { prerender: true },
+  },
+})
+</code></pre>
+<p><code>nuxt generate</code> behaves like <code>nuxt build</code> with <code>prerender: true</code> everywhere, plus emits <code>/200.html</code> and <code>/404.html</code> as SPA fallbacks.</p>
+<h3>ISR (Incremental Static Regeneration) — <code>isr</code></h3>
+<p>Serve cached HTML; regenerate in the background after it goes stale. Best for:</p>
+<ul>
+<li>High-traffic pages whose content updates occasionally.</li>
+</ul>
+<pre><code class="language-ts">export default defineNuxtConfig({
+  routeRules: {
+    '/blog/**': { isr: 60 },        // 60s cache
+    '/docs/**': { isr: true },      // cache until redeploy
+  },
+})
+</code></pre>
+<p>Platform support: Vercel, Netlify, Cloudflare (via the chosen preset).</p>
+<h3>SWR (Stale-While-Revalidate) — <code>swr</code></h3>
+<p>Similar to ISR but implemented via HTTP cache headers / CDN:</p>
+<pre><code class="language-ts">routeRules: {
+  '/feed': { swr: 30 },             // serve stale up to 30s
+}
+</code></pre>
+<h3>CSR-only — <code>ssr: false</code></h3>
+<p>Skip SSR entirely for a section. Best for:</p>
+<ul>
+<li>Dashboards behind auth.</li>
+<li>Pages that depend on <code>window</code>/<code>document</code> at first paint.</li>
+</ul>
+<pre><code class="language-ts">routeRules: {
+  '/admin/**': { ssr: false },
+}
+</code></pre>
+<p>For a fully CSR app, disable SSR globally:</p>
+<pre><code class="language-ts">export default defineNuxtConfig({
+  ssr: false,
+})
+</code></pre>
+<p><code>nuxt generate</code> then emits an <code>index.html</code> that boots the Vue app client-side — just like a classic SPA.</p>
+<h2><code>routeRules</code> — one place to decide</h2>
+<p>You can combine concerns on the same rule:</p>
+<pre><code class="language-ts">export default defineNuxtConfig({
+  routeRules: {
+    '/': { prerender: true },
+    '/blog/**': { swr: 3600, headers: { 'cache-control': 's-maxage=3600' } },
+    '/api/public/*': { cache: { maxAge: 300 } },
+    '/admin/**': { ssr: false, appMiddleware: 'auth' },
+    '/legacy': { redirect: { to: '/new', statusCode: 301 } },
+    '/proxy/**': { proxy: 'https://api.example.com/**' },
+  },
+})
+</code></pre>
+<p>Available keys include <code>prerender</code>, <code>isr</code>, <code>swr</code>, <code>ssr</code>, <code>cache</code>, <code>headers</code>, <code>redirect</code>, <code>proxy</code>, <code>noScripts</code>, <code>appMiddleware</code>. Wildcards: <code>*</code> for segments, <code>**</code> for deep matches.</p>
+<h2>Static vs hybrid hosting</h2>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Output</th>
+<th>Hosting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Full SSR</td>
+<td><code>.output/server/</code> + <code>public/</code></td>
+<td>Node, Vercel, Netlify, Cloudflare</td>
+</tr>
+<tr>
+<td>Full SSG (<code>nuxt generate</code>)</td>
+<td><code>.output/public/</code> only</td>
+<td>Any static host + CDN</td>
+</tr>
+<tr>
+<td>Hybrid (per-route)</td>
+<td>Mix of prerendered + SSR artefacts</td>
+<td>Platforms that understand ISR/SWR</td>
+</tr>
+<tr>
+<td>CSR (<code>ssr: false</code> + generate)</td>
+<td>Static <code>index.html</code> + JS bundles</td>
+<td>Any static host</td>
+</tr>
+</tbody>
+</table>
+<h2>When to choose what</h2>
+<ul>
+<li><strong>Logged-in dashboards</strong> → SSR (or <code>ssr: false</code> if you really don't need SEO).</li>
+<li><strong>Marketing pages</strong> → <code>prerender: true</code>.</li>
+<li><strong>Blog / docs / catalogs</strong> → ISR or SWR.</li>
+<li><strong>APIs for your app</strong> → <code>/api/*</code> with <code>cache.maxAge</code> if idempotent.</li>
+<li><strong>Redirects / proxies</strong> → <code>routeRules</code>, not custom middleware.</li>
+</ul>
+<h2>Gotchas</h2>
+<ul>
+<li><strong><code>noScripts: true</code></strong> emits HTML without Nuxt's runtime JS — great for pure static landing pages, fatal for interactive ones.</li>
+<li><strong><code>ssr: false</code> per route</strong> still builds the shell on the server; the client hydrates only JS.</li>
+<li><strong><code>prerender</code> dynamic routes</strong> require crawler hints or an explicit list (<code>nuxt.config</code> → <code>nitro.prerender.routes</code>).</li>
+<li>On <strong>CDN edges</strong>, combine <code>swr</code>/<code>isr</code> with cache-control headers to keep things snappy.</li>
+</ul>
+<p>Pick rendering mode per route, keep your intent in <code>routeRules</code>, and let Nitro handle the rest.</p>
+</div></article><!--]--></div><div class="c-chapter-nav" data-v-0a101b04><a href="/books/nuxtjs/14-layers" class="nav-link nav-prev u-cartoon-box" data-v-0a101b04><i class="iconfont icon-arrow_left text-12" data-v-0a101b04></i><div class="nav-label" data-v-0a101b04><span class="nav-hint" data-v-0a101b04>Previous Chapter</span><span class="nav-title" data-v-0a101b04>Layers</span></div></a><a href="/books/nuxtjs/16-deployment" class="nav-link nav-next u-cartoon-box" data-v-0a101b04><div class="nav-label" data-v-0a101b04><span class="nav-hint" data-v-0a101b04>Next Chapter</span><span class="nav-title" data-v-0a101b04>Deployment</span></div><i class="iconfont icon-arrow_right text-12" data-v-0a101b04></i></a></div></div></div><button class="sidebar-toggle"><i class="iconfont icon-caidan text-18"></i></button><!----></div><!--]--></main><div class="c-footer"><div class="common-footer-inner"><div class="logo-contract"><a href="/" class="inline-flex space-x-8 items-center"><div class="sub-logo"><svg t="1696732448231" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6740" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30"><defs><linearGradient id="left-to-right"><stop offset="0" stop-color="#ed3da1"><animate dur="3s" attributeName="offset" fill="freeze" values="-1;2;0" repeatCount="indefinite"></animate></stop><stop offset="0" stop-color="#ffe9f6"><animate dur="3s" attributeName="offset" fill="freeze" values="-1;2;0" repeatCount="indefinite"></animate></stop></linearGradient></defs><path d="M105.321374 914.265136c-11.700669 0-17.551004-11.702475-17.551003-17.541972 0-5.870203 5.850335-17.551004 11.7097-17.551004 269.155125-111.194286 561.722425-169.684988 848.441196-181.3983v5.839497c23.410369 0 52.662042-5.839497 76.076024-5.839497v11.711506c-292.558269 29.251673-579.284266 87.756824-854.300562 175.535323-17.551004 17.541972-40.964985 23.403144-64.375355 29.244447zM772.382332 580.741882c-29.260704 0-58.514183-5.861172-76.054349-29.240835-17.55281-23.412175-35.123682-46.826157-35.123681-76.079636 0-81.917327 23.403144-157.984319 76.068798-222.350642 46.835188-64.377161 117.042815-111.168999 193.106195-140.433316 29.251673 0 52.654817 17.563647 64.368129 40.954148-5.862978 5.850335-11.711506 11.711506-17.563647 11.711506 29.251673 11.700669 40.952342 35.102007 40.952342 64.366324 5.862978 163.834654-99.459299 310.121916-245.753787 351.072451z m157.996963-374.484627c-11.702475 5.850335-29.273347 17.551004-40.954148 29.264316-5.870203 0-5.870203-5.850335-5.870203-11.711506-87.778499 52.665654-146.281844 146.294487-152.114116 245.742949 0 11.711506 5.832272 52.665654 23.38147 46.835188 29.284184-11.7097 52.662042-23.423013 70.225688-46.835188 19.503523-21.441593 39.00524-42.894024 58.506958-64.344648 35.121876-46.81532 58.535857-105.320471 70.216658-163.847297 11.700669-17.55281-5.848528-29.253479-23.392307-35.103814zM122.872378 288.185419l-64.366323 29.251673c-5.839497 5.839497-11.689832 5.839497-17.540167 5.839497-5.862978 0-5.862978-11.713313-5.862978-17.540166 0-17.551004 11.713313-29.264316 29.273347-35.114651 35.103813-29.264316 70.20582-52.654817 111.158163-70.216657 17.551004 5.850335 29.264316 23.403144 35.11465 40.952341 0 17.540166 0 17.540166-81.919133 204.812282-29.249866 58.505151-52.651204 122.873281-58.523213 187.237798 0 5.852141 5.872009 17.55281 5.872009 23.412176v5.841303c-1.959745 1.948907-3.910458 3.912264-5.872009 5.861172-5.830466 0-11.700669 0-11.700669-5.861172-29.253479 0-52.663848-17.55281-58.505152-46.804482 0-46.813513 11.711506-99.470137 29.251673-140.433316 23.413982-64.366323 58.517795-122.871475 93.619802-187.237798zM637.792126 282.326054c11.700669 157.984319-87.760436 298.417635-239.892614 339.380813-29.264316 0-58.515989-5.850335-76.07783-29.264316-23.401338-17.561841-35.092976-46.813513-35.092976-76.056155 0-81.926358 23.403144-157.99335 76.068798-222.359673 46.804482-64.355486 117.008497-111.159968 193.086327-140.433316 29.242642 0 52.665654 17.551004 64.368129 40.975823-5.852141 5.839497-11.702475 11.689832-17.55281 11.689832 17.551004 17.549197 35.092976 46.811707 35.092976 76.066992z m-81.908295-35.103814c-11.7097 5.850335-29.260704 17.551004-40.963179 29.251673-5.850335 0-5.850335-5.850335-5.850335-11.700669-87.769468 52.665654-146.272813 146.28365-152.135791 245.762818 0 11.680801 5.862978 52.663848 23.413982 46.793645 29.251673-11.702475 52.665654-23.403144 70.20582-46.793645a140273.571944 140273.571944 0 0 0 58.515989-64.366324c35.103813-46.826157 58.514183-105.320471 70.214852-163.84549 11.713313-17.551004-5.839497-29.253479-23.401338-35.102008zM23.414885 808.944665c269.155125-111.170806 561.711587-169.684988 848.437584-181.3983v5.859365c29.251673 0 52.665654-5.859366 76.068798-5.859365v11.711506c-292.558269 29.26251-579.287878 87.778499-854.302368 175.544354-23.413982 11.713313-40.954148 17.554616-64.36813 23.3905h-5.837691c-5.872009 0-11.702475-5.835885-11.702475-17.551003 3.903233-3.896009 7.804661-7.797436 11.704282-11.697057z" fill="url(#left-to-right)" p-id="6741" class="logo-path"></path></svg></div><img class="h-50" src="/logo.svg"></a><div class="contacts"><!--[--><a class="contact-item" href="mailto:yldiswinter@gmail.com"><i class="iconfont icon-youxiang"></i></a><a class="contact-item" href="https://github.com/WinterMain"><i class="iconfont icon-github"></i></a><!--]--></div></div><div class="nav-area"><div class="pr-20"><p class="label"><span class="z-1">LINKS</span></p></div><div class="nav-items"><!--[--><!--[--><a href="/question" class="nav-item">Question</a><!--]--><!--[--><a href="/blog" class="nav-item">Blog</a><!--]--><!--[--><a href="/message" class="nav-item">Message</a><!--]--><!--[--><a class="nav-item" target="_blank" rel="noopener noreferrer" href="https://tools.winter100.com">Toolbox</a><!--]--><!--]--></div></div><div class="donate-area"><div class="pr-20"><p class="label"><span class="z-1">DONATE</span></p></div><div class="donate-list"><!--[--><div class="donate-item"><div class="c-common-qrcode"><canvas style="width:60px;height:60px;"></canvas></div><div class="ml-12"><div class="flex items-center mt-4"><img src="/images/btc.png" height="30" class="h-20"><span class="ml-8 text-primary font-w500 text-16 flex-1">BTC</span><!--[--><span class="c-copy el-tooltip__trigger el-tooltip__trigger"><i class="el-icon text-12" style=""><!--[--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M768 832a128 128 0 0 1-128 128H192A128 128 0 0 1 64 832V384a128 128 0 0 1 128-128v64a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64z"></path><path fill="currentColor" d="M384 128a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64V192a64 64 0 0 0-64-64zm0-64h448a128 128 0 0 1 128 128v448a128 128 0 0 1-128 128H384a128 128 0 0 1-128-128V192A128 128 0 0 1 384 64"></path></svg><!--]--></i></span><!--teleport start--><!--teleport end--><!--]--></div><p class="mt-12 text-addr"><span class="">1Q6ZDFC3FueXY3JocmeMqgiSsGGtppbvz2</span></p></div></div><div class="donate-item"><div class="c-common-qrcode"><canvas style="width:60px;height:60px;"></canvas></div><div class="ml-12"><div class="flex items-center mt-4"><img src="/images/eth.png" height="30" class="h-20"><span class="ml-8 text-primary font-w500 text-16 flex-1">ETH</span><!--[--><span class="c-copy el-tooltip__trigger el-tooltip__trigger"><i class="el-icon text-12" style=""><!--[--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M768 832a128 128 0 0 1-128 128H192A128 128 0 0 1 64 832V384a128 128 0 0 1 128-128v64a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64z"></path><path fill="currentColor" d="M384 128a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64V192a64 64 0 0 0-64-64zm0-64h448a128 128 0 0 1 128 128v448a128 128 0 0 1-128 128H384a128 128 0 0 1-128-128V192A128 128 0 0 1 384 64"></path></svg><!--]--></i></span><!--teleport start--><!--teleport end--><!--]--></div><p class="mt-12 text-addr"><span class="">0xff6FC30033269845d196cB48F6a0660598D218D8</span></p></div></div><!--]--></div></div><div class="flex-1 ml-20 flex justify-end xs:hidden"><div class="c-adsense mt-0"><div class="ad-container" style="background-image:url(/images/adsenseWinter.svg);"><!----></div></div></div></div></div><!--v-if--><!--]--></section><!--]--></div><div id="teleports"></div><script type="application/json" data-nuxt-data="nuxt-app" data-ssr id="__NUXT_DATA__" data-src="/books/nuxtjs/15-rendering-modes/_payload.json?adf5c24d-6909-4c89-9550-b77b1bc7d41e">[{"state":1,"once":7,"_errors":8,"serverRendered":10,"path":11,"pinia":12,"prerenderedAt":43},["Reactive",2],{"$ssite-config":3},{"env":4,"name":5,"url":6},"production","Winter 100分","https://winter100.com/",["Set"],["ShallowReactive",9],{},true,"/books/nuxtjs/15-rendering-modes",["Reactive",13],{"lang":14,"main":27},{"langOptions":15,"lang":24,"defaultLang":24},[16,20,23],{"val":17,"text":18,"icon":19},"zh_Hans_CN","简体中文","/images/cn.svg",{"val":21,"text":22,"icon":19},"zh_Hant_HK","繁体中文",{"val":24,"text":25,"icon":26},"en_US","English","/images/en.svg",{"category":28,"nav":29,"likes":30,"donateCoins":31},"browserplugin","all",[],[32,36,40],{"coin":33,"address":34,"icon":35},"BTC","1Q6ZDFC3FueXY3JocmeMqgiSsGGtppbvz2","/images/btc.png",{"coin":37,"address":38,"icon":39},"ETH","0xff6FC30033269845d196cB48F6a0660598D218D8","/images/eth.png",{"coin":41,"address":38,"icon":42},"CET","/images/cet.png",1777973623180]</script>
+<script>window.__NUXT__={};window.__NUXT__.config={public:{MODE:"",NODE_ENV:"production",NAME:"winter100"},app:{baseURL:"/",buildId:"adf5c24d-6909-4c89-9550-b77b1bc7d41e",buildAssetsDir:"/_nuxt/",cdnURL:""}}</script></body></html>

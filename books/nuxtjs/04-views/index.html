@@ -1,0 +1,402 @@
+<!DOCTYPE html><html  data-capo=""><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Views - Nuxt.js in Action - Winter100</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ1S1HBYLX"></script>
+<link rel="stylesheet" type="text/css" href="/iconfont/iconfont.css?t=20240930">
+<link rel="stylesheet" href="/_nuxt/entry.CfkJKbr-.css">
+<link rel="stylesheet" href="/_nuxt/default.CerbM5oS.css">
+<link rel="stylesheet" href="/_nuxt/_chapter_.bM-96XUK.css">
+<link rel="preload" as="fetch" crossorigin="anonymous" href="/books/nuxtjs/04-views/_payload.json?adf5c24d-6909-4c89-9550-b77b1bc7d41e">
+<script src="/_nuxt/Bni5rCE1-legacy.js" nomodule crossorigin></script>
+<script src="/_nuxt/CoLxJWwc-legacy.js" nomodule crossorigin></script>
+<link rel="icon" type="image/x-icon" href="/favicon.ico?t=20260104">
+<script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-KZ1S1HBYLX');
+</script>
+<meta property="og:image" content="/slogan.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="zh-hans" href="https://winter100.com/books/nuxtjs/04-views?lang=zh_Hans_CN">
+<link rel="alternate" hreflang="zh-hant" href="https://winter100.com/books/nuxtjs/04-views?lang=zh_Hant_HK">
+<link rel="alternate" hreflang="en" href="https://winter100.com/books/nuxtjs/04-views?lang=en_US">
+<link rel="canonical" href="https://winter100.com/books/nuxtjs/04-views">
+<meta name="og:title" content="Views - Nuxt.js in Action - Winter100">
+<meta name="keywords" content="Winter100, WinterCCC, 100 points, blockchain, question and answer, tool, comment, reply, storage, permanent, blockchain wisdom, question and answer fun, 100-point project, toolbox, blog, technology">
+<meta name="description" content="Master Nuxt 4 full-stack development end-to-end">
+<meta name="og:description" content="Master Nuxt 4 full-stack development end-to-end">
+<script type="module" src="/_nuxt/DB7QiDPZ.js" crossorigin></script></head><body><div id="el-popper-container-1024"><!--teleport start anchor--><!--[--><div style="z-index:2001;position:absolute;left:0;top:0;width:140px;display:none;" class="el-popper is-light el-popover c-lang-legal-popover" tabindex="-1" aria-hidden="true"><!--[--><!--[--><!--[--><!--[--><!--v-if--><!--[--><div class="c-lang-legal-box"><div class="c-contain"><ul class="c-list"><!--[--><li class="item-list false"><img src="/images/cn.svg" class="c-lang-legal-flag" alt><div class="flex-shrink-0">简体中文</div></li><li class="item-list false"><img src="/images/cn.svg" class="c-lang-legal-flag" alt><div class="flex-shrink-0">繁体中文</div></li><li class="item-list list-item-active"><img src="/images/en.svg" class="c-lang-legal-flag" alt><div class="flex-shrink-0">English</div></li><!--]--></ul></div></div><!--]--><!--]--><span class="el-popper__arrow" style="position:absolute;" data-popper-arrow></span><!--]--><!--]--><!--]--></div><!--]--><!--teleport anchor--><!--teleport start anchor--><!--[--><!--v-if--><!--]--><!--teleport anchor--><!--teleport start anchor--><!--[--><!--v-if--><!--]--><!--teleport anchor--></div><div id="__nuxt"><!--[--><section class="el-container is-vertical l-home"><!--[--><div class="nuxt-loading-indicator" style="position:fixed;top:0;right:0;left:0;pointer-events:none;width:auto;height:3px;opacity:0;background:repeating-linear-gradient(to right,#00dc82 0%,#34cdfe 50%,#0047e1 100%);background-size:Infinity% auto;transform:scaleX(0%);transform-origin:left;transition:transform 0.1s, height 0.4s, opacity 0.4s;z-index:999999;"></div><!--[--><!----><!--]--><!--[--><!----><!--]--><div class="c-common-header"><header class="el-header c-common-header-inner" style=""><!--[--><a href="/" class="flex space-x-8 items-center"><div class="sub-logo"><svg t="1696732448231" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6740" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30"><defs><linearGradient id="left-to-right"><stop offset="0" stop-color="#ed3da1"><animate dur="3s" attributeName="offset" fill="freeze" values="-1;2;0" repeatCount="indefinite"></animate></stop><stop offset="0" stop-color="#ffe9f6"><animate dur="3s" attributeName="offset" fill="freeze" values="-1;2;0" repeatCount="indefinite"></animate></stop></linearGradient></defs><path d="M105.321374 914.265136c-11.700669 0-17.551004-11.702475-17.551003-17.541972 0-5.870203 5.850335-17.551004 11.7097-17.551004 269.155125-111.194286 561.722425-169.684988 848.441196-181.3983v5.839497c23.410369 0 52.662042-5.839497 76.076024-5.839497v11.711506c-292.558269 29.251673-579.284266 87.756824-854.300562 175.535323-17.551004 17.541972-40.964985 23.403144-64.375355 29.244447zM772.382332 580.741882c-29.260704 0-58.514183-5.861172-76.054349-29.240835-17.55281-23.412175-35.123682-46.826157-35.123681-76.079636 0-81.917327 23.403144-157.984319 76.068798-222.350642 46.835188-64.377161 117.042815-111.168999 193.106195-140.433316 29.251673 0 52.654817 17.563647 64.368129 40.954148-5.862978 5.850335-11.711506 11.711506-17.563647 11.711506 29.251673 11.700669 40.952342 35.102007 40.952342 64.366324 5.862978 163.834654-99.459299 310.121916-245.753787 351.072451z m157.996963-374.484627c-11.702475 5.850335-29.273347 17.551004-40.954148 29.264316-5.870203 0-5.870203-5.850335-5.870203-11.711506-87.778499 52.665654-146.281844 146.294487-152.114116 245.742949 0 11.711506 5.832272 52.665654 23.38147 46.835188 29.284184-11.7097 52.662042-23.423013 70.225688-46.835188 19.503523-21.441593 39.00524-42.894024 58.506958-64.344648 35.121876-46.81532 58.535857-105.320471 70.216658-163.847297 11.700669-17.55281-5.848528-29.253479-23.392307-35.103814zM122.872378 288.185419l-64.366323 29.251673c-5.839497 5.839497-11.689832 5.839497-17.540167 5.839497-5.862978 0-5.862978-11.713313-5.862978-17.540166 0-17.551004 11.713313-29.264316 29.273347-35.114651 35.103813-29.264316 70.20582-52.654817 111.158163-70.216657 17.551004 5.850335 29.264316 23.403144 35.11465 40.952341 0 17.540166 0 17.540166-81.919133 204.812282-29.249866 58.505151-52.651204 122.873281-58.523213 187.237798 0 5.852141 5.872009 17.55281 5.872009 23.412176v5.841303c-1.959745 1.948907-3.910458 3.912264-5.872009 5.861172-5.830466 0-11.700669 0-11.700669-5.861172-29.253479 0-52.663848-17.55281-58.505152-46.804482 0-46.813513 11.711506-99.470137 29.251673-140.433316 23.413982-64.366323 58.517795-122.871475 93.619802-187.237798zM637.792126 282.326054c11.700669 157.984319-87.760436 298.417635-239.892614 339.380813-29.264316 0-58.515989-5.850335-76.07783-29.264316-23.401338-17.561841-35.092976-46.813513-35.092976-76.056155 0-81.926358 23.403144-157.99335 76.068798-222.359673 46.804482-64.355486 117.008497-111.159968 193.086327-140.433316 29.242642 0 52.665654 17.551004 64.368129 40.975823-5.852141 5.839497-11.702475 11.689832-17.55281 11.689832 17.551004 17.549197 35.092976 46.811707 35.092976 76.066992z m-81.908295-35.103814c-11.7097 5.850335-29.260704 17.551004-40.963179 29.251673-5.850335 0-5.850335-5.850335-5.850335-11.700669-87.769468 52.665654-146.272813 146.28365-152.135791 245.762818 0 11.680801 5.862978 52.663848 23.413982 46.793645 29.251673-11.702475 52.665654-23.403144 70.20582-46.793645a140273.571944 140273.571944 0 0 0 58.515989-64.366324c35.103813-46.826157 58.514183-105.320471 70.214852-163.84549 11.713313-17.551004-5.839497-29.253479-23.401338-35.102008zM23.414885 808.944665c269.155125-111.170806 561.711587-169.684988 848.437584-181.3983v5.859365c29.251673 0 52.665654-5.859366 76.068798-5.859365v11.711506c-292.558269 29.26251-579.287878 87.778499-854.302368 175.544354-23.413982 11.713313-40.954148 17.554616-64.36813 23.3905h-5.837691c-5.872009 0-11.702475-5.835885-11.702475-17.551003 3.903233-3.896009 7.804661-7.797436 11.704282-11.697057z" fill="url(#left-to-right)" p-id="6741" class="logo-path"></path></svg></div><img class="h-40" src="/logo.svg"></a><div class="nav-items"><!--[--><!--[--><a href="/" class="nav-item">Home</a><!--]--><!--[--><a href="/question" class="nav-item">Question</a><!--]--><!--[--><a href="/blog" class="nav-item">Blog</a><!--]--><!--[--><a href="/message" class="nav-item">Message</a><!--]--><!--[--><a href="/books" class="nav-item active">Books</a><!--]--><!--[--><a href="/toolbox" class="nav-item">Toolbox</a><!--]--><!--]--></div><div class="flex-1"></div><div class="c-lang-legal xs:hidden"><!--[--><span class="c-lang-legal-trigger el-tooltip__trigger el-tooltip__trigger"><img src="/images/en.svg" class="c-lang-legal-trigger-icon" alt> English <i class="el-icon c-lang-legal-trigger-caret" style=""><!--[--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="m192 384 320 384 320-384z"></path></svg><!--]--></i></span><!--teleport start--><!--teleport end--><!--]--></div><i class="iconfont icon-caidan text-theme hover:opacity-70 text-28 hidden xs:block"></i><!--]--></header><!----></div><main class="l-default-home"><!--[--><div class="p-book-chapter u-cartoon-page"><div class="u-cartoon-sky" aria-hidden="true"></div><div class="page-container pt-30 pb-60"><div class="c-aside"><div class="fixed-area"><aside class="c-books-sidebar u-cartoon-box u-cartoon-box--no-hover" data-v-52e6855c><div class="sidebar-header" data-v-52e6855c><a href="/books" class="sidebar-back" data-v-52e6855c><i class="iconfont icon-arrow_left text-12" data-v-52e6855c></i><span data-v-52e6855c>All Books</span></a></div><p class="side-title" data-v-52e6855c>Nuxt.js in Action</p><nav class="sidebar-nav" data-v-52e6855c><!--[--><a href="/books/nuxtjs/01-introduction" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>01</span><span data-v-52e6855c>Introduction to Nuxt</span></a><a href="/books/nuxtjs/02-installation" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>02</span><span data-v-52e6855c>Installation</span></a><a href="/books/nuxtjs/03-configuration" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>03</span><span data-v-52e6855c>Configuration</span></a><a aria-current="page" href="/books/nuxtjs/04-views" class="router-link-active router-link-exact-active sidebar-item active" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>04</span><span data-v-52e6855c>Views</span></a><a href="/books/nuxtjs/05-assets" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>05</span><span data-v-52e6855c>Assets</span></a><a href="/books/nuxtjs/06-styling" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>06</span><span data-v-52e6855c>Styling</span></a><a href="/books/nuxtjs/07-routing" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>07</span><span data-v-52e6855c>Routing</span></a><a href="/books/nuxtjs/08-seo-meta" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>08</span><span data-v-52e6855c>SEO and Meta</span></a><a href="/books/nuxtjs/09-transitions" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>09</span><span data-v-52e6855c>Transitions</span></a><a href="/books/nuxtjs/10-data-fetching" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>10</span><span data-v-52e6855c>Data Fetching</span></a><a href="/books/nuxtjs/11-state-management" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>11</span><span data-v-52e6855c>State Management</span></a><a href="/books/nuxtjs/12-error-handling" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>12</span><span data-v-52e6855c>Error Handling</span></a><a href="/books/nuxtjs/13-server" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>13</span><span data-v-52e6855c>Server with Nitro</span></a><a href="/books/nuxtjs/14-layers" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>14</span><span data-v-52e6855c>Layers</span></a><a href="/books/nuxtjs/15-rendering-modes" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>15</span><span data-v-52e6855c>Rendering Modes</span></a><a href="/books/nuxtjs/16-deployment" class="sidebar-item" data-v-52e6855c><span class="sidebar-index" data-v-52e6855c>16</span><span data-v-52e6855c>Deployment</span></a><!--]--></nav></aside></div></div><div class="c-outer bg-white u-cartoon-box u-cartoon-box--no-hover"><div class="en_US multi-lang-stage"><!--[--><article class="c-chapter-content multi-lang-pane" data-lang="zh_Hans_CN"><div class="mark-down code-content"><h1>视图结构</h1>
+<p>Nuxt 给你 4 层来搭 UI：<code>app.vue</code>、<strong>组件</strong>、<strong>页面</strong>、<strong>布局</strong>。每一层分工明确，Nuxt 会自动连线，大多数时候你只要加文件就行。</p>
+<h2><code>app.vue</code></h2>
+<p><code>app.vue</code> 是应用入口。如果完全不需要路由：</p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;div&gt;
+    &lt;h1&gt;欢迎&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<p>想要多页面时挂上 <code>&lt;NuxtPage /&gt;</code>：</p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;NuxtLayout&gt;
+    &lt;NuxtPage /&gt;
+  &lt;/NuxtLayout&gt;
+&lt;/template&gt;
+</code></pre>
+<p>如果<strong>删掉</strong> <code>app.vue</code>，Nuxt 会生成一个默认入口，相当于 <code>&lt;NuxtLayout&gt;&lt;NuxtPage /&gt;&lt;/NuxtLayout&gt;</code>。</p>
+<h2>组件</h2>
+<p><code>app/components/</code> 下的所有内容会自动导入，不用手写 <code>import</code>：</p>
+<pre><code>app/components/
+├── AppHeader.vue
+├── AppFooter.vue
+└── AppAlert.vue
+</code></pre>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;div&gt;
+    &lt;AppHeader /&gt;
+    &lt;AppAlert&gt;Hello，来自自动导入的组件。&lt;/AppAlert&gt;
+    &lt;AppFooter /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<p>嵌套目录会变成名称前缀：<code>app/components/base/Button.vue</code> → <code>&lt;BaseButton /&gt;</code>。</p>
+<p>小建议：</p>
+<ul>
+<li>在 <code>&lt;template&gt;</code> 里统一用 PascalCase。</li>
+<li>在组件名前加 <code>Lazy</code> 可以延迟加载：<code>&lt;LazyAppHeavy /&gt;</code>。</li>
+</ul>
+<h2>页面</h2>
+<p>页面放在 <code>app/pages/</code>，每个 <code>.vue</code> 文件就是一条路由：</p>
+<pre><code>app/pages/
+├── index.vue          →  /
+├── about.vue          →  /about
+└── blog/
+    ├── index.vue      →  /blog
+    └── [id].vue       →  /blog/:id
+</code></pre>
+<pre><code class="language-vue">&lt;!-- app/pages/about.vue --&gt;
+&lt;template&gt;
+  &lt;section&gt;
+    &lt;h1&gt;关于我们&lt;/h1&gt;
+  &lt;/section&gt;
+&lt;/template&gt;
+</code></pre>
+<p>页面会自动分包，<code>&lt;NuxtLink&gt;</code> 会帮你预取，<code>definePageMeta({ … })</code> 用来声明页面级元信息。</p>
+<h2>布局</h2>
+<p>布局用来包裹一组页面，负责共用的外壳（头部、底部、侧边栏）。文件放在 <code>app/layouts/</code>：</p>
+<pre><code class="language-vue">&lt;!-- app/layouts/default.vue --&gt;
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;AppHeader /&gt;
+    &lt;slot /&gt;
+    &lt;AppFooter /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<p><code>default.vue</code> 会自动应用。要自定义布局，页面级声明：</p>
+<pre><code class="language-vue">&lt;script setup lang=&quot;ts&quot;&gt;
+definePageMeta({ layout: 'admin' })
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div&gt;Dashboard&lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<p>……对应的文件放到 <code>app/layouts/admin.vue</code>。</p>
+<h2><code>&lt;NuxtLayout&gt;</code> 与 <code>&lt;NuxtPage&gt;</code></h2>
+<ul>
+<li><code>&lt;NuxtPage /&gt;</code> 是文件式路由的“出口”，负责流式渲染、预取、过渡。</li>
+<li><code>&lt;NuxtLayout&gt;</code> 决定当前页面用哪个布局，也可以手动指定 <code>name</code>：</li>
+</ul>
+<pre><code class="language-vue">&lt;NuxtLayout name=&quot;admin&quot;&gt;
+  &lt;NuxtPage /&gt;
+&lt;/NuxtLayout&gt;
+</code></pre>
+<p>如果只有一个布局，完全可以跳过 <code>layouts/</code>，把外壳直接写在 <code>app.vue</code> 里。</p>
+<h2>要点回顾</h2>
+<table>
+<thead>
+<tr>
+<th>需求</th>
+<th>去哪儿</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>根入口／全站外壳</td>
+<td><code>app.vue</code>（或单布局）</td>
+</tr>
+<tr>
+<td>可复用 UI 块</td>
+<td><code>app/components/</code></td>
+</tr>
+<tr>
+<td>一条路由 + 视图</td>
+<td><code>app/pages/</code></td>
+</tr>
+<tr>
+<td>多页面共享的外壳</td>
+<td><code>app/layouts/</code></td>
+</tr>
+</tbody>
+</table>
+<h2>进阶：定制 HTML 模板</h2>
+<p>如果 <code>useHead</code> 还不够（需要改 Nitro 输出的原始 HTML），用 <code>render:html</code> 钩子写一个 Nitro 插件：</p>
+<pre><code class="language-ts">// server/plugins/meta.ts
+export default defineNitroPlugin((nitroApp) =&gt; {
+  nitroApp.hooks.hook('render:html', (html, { event }) =&gt; {
+    html.head.push('&lt;meta name=&quot;description&quot; content=&quot;自定义描述&quot; /&gt;')
+  })
+})
+</code></pre>
+<p>这种写法谨慎使用 —— <code>useHead</code> 能覆盖 99% 的情况，静态资源和 SEO 章节会介绍更顺手的做法。</p>
+</div></article><article class="c-chapter-content multi-lang-pane" data-lang="zh_Hant_HK"><div class="mark-down code-content"><h1>視圖結構</h1>
+<p>Nuxt 提供 4 層介面建構：<code>app.vue</code>、<strong>元件</strong>、<strong>頁面</strong>、<strong>佈局</strong>。各司其職，Nuxt 會自動串接，多數時候只需新增檔案即可。</p>
+<h2><code>app.vue</code></h2>
+<p><code>app.vue</code> 是應用入口。若完全不需路由：</p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;div&gt;
+    &lt;h1&gt;歡迎&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<p>需要多頁面時掛上 <code>&lt;NuxtPage /&gt;</code>：</p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;NuxtLayout&gt;
+    &lt;NuxtPage /&gt;
+  &lt;/NuxtLayout&gt;
+&lt;/template&gt;
+</code></pre>
+<p>若<strong>刪除</strong> <code>app.vue</code>，Nuxt 會產生預設入口，等同於 <code>&lt;NuxtLayout&gt;&lt;NuxtPage /&gt;&lt;/NuxtLayout&gt;</code>。</p>
+<h2>元件</h2>
+<p><code>app/components/</code> 下的所有內容會自動匯入，毋須手寫 <code>import</code>：</p>
+<pre><code>app/components/
+├── AppHeader.vue
+├── AppFooter.vue
+└── AppAlert.vue
+</code></pre>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;div&gt;
+    &lt;AppHeader /&gt;
+    &lt;AppAlert&gt;Hello，來自自動匯入的元件。&lt;/AppAlert&gt;
+    &lt;AppFooter /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<p>巢狀目錄會成為名稱前綴：<code>app/components/base/Button.vue</code> → <code>&lt;BaseButton /&gt;</code>。</p>
+<p>小建議：</p>
+<ul>
+<li><code>&lt;template&gt;</code> 一律採用 PascalCase。</li>
+<li>前置 <code>Lazy</code> 可延遲載入：<code>&lt;LazyAppHeavy /&gt;</code>。</li>
+</ul>
+<h2>頁面</h2>
+<p>頁面存放於 <code>app/pages/</code>，每個 <code>.vue</code> 檔即一條路由：</p>
+<pre><code>app/pages/
+├── index.vue          →  /
+├── about.vue          →  /about
+└── blog/
+    ├── index.vue      →  /blog
+    └── [id].vue       →  /blog/:id
+</code></pre>
+<pre><code class="language-vue">&lt;!-- app/pages/about.vue --&gt;
+&lt;template&gt;
+  &lt;section&gt;
+    &lt;h1&gt;關於我們&lt;/h1&gt;
+  &lt;/section&gt;
+&lt;/template&gt;
+</code></pre>
+<p>頁面會自動分包，<code>&lt;NuxtLink&gt;</code> 會協助預取，<code>definePageMeta({ … })</code> 用於宣告頁面層級中繼資料。</p>
+<h2>佈局</h2>
+<p>佈局用於包裹多個頁面，承載共用外殼（頁首、頁尾、側欄）。檔案置於 <code>app/layouts/</code>：</p>
+<pre><code class="language-vue">&lt;!-- app/layouts/default.vue --&gt;
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;AppHeader /&gt;
+    &lt;slot /&gt;
+    &lt;AppFooter /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<p><code>default.vue</code> 會自動套用。如需自訂佈局，於頁面宣告：</p>
+<pre><code class="language-vue">&lt;script setup lang=&quot;ts&quot;&gt;
+definePageMeta({ layout: 'admin' })
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div&gt;Dashboard&lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<p>……對應檔案放於 <code>app/layouts/admin.vue</code>。</p>
+<h2><code>&lt;NuxtLayout&gt;</code> 與 <code>&lt;NuxtPage&gt;</code></h2>
+<ul>
+<li><code>&lt;NuxtPage /&gt;</code> 為檔案式路由的「出口」，負責串流渲染、預取與過渡動畫。</li>
+<li><code>&lt;NuxtLayout&gt;</code> 決定當前頁面採用哪個佈局，亦可透過 <code>name</code> 手動指定：</li>
+</ul>
+<pre><code class="language-vue">&lt;NuxtLayout name=&quot;admin&quot;&gt;
+  &lt;NuxtPage /&gt;
+&lt;/NuxtLayout&gt;
+</code></pre>
+<p>若僅有一個佈局，可跳過 <code>layouts/</code>，將外殼直接寫於 <code>app.vue</code>。</p>
+<h2>要點回顧</h2>
+<table>
+<thead>
+<tr>
+<th>需求</th>
+<th>該往哪放</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>根入口／全站外殼</td>
+<td><code>app.vue</code>（或單一佈局）</td>
+</tr>
+<tr>
+<td>可重用的 UI 區塊</td>
+<td><code>app/components/</code></td>
+</tr>
+<tr>
+<td>一條路由 + 視圖</td>
+<td><code>app/pages/</code></td>
+</tr>
+<tr>
+<td>多頁共享的外殼</td>
+<td><code>app/layouts/</code></td>
+</tr>
+</tbody>
+</table>
+<h2>進階：自訂 HTML 模板</h2>
+<p>若 <code>useHead</code> 無法滿足（需改動 Nitro 輸出的原始 HTML），可透過 <code>render:html</code> 鉤子撰寫 Nitro 外掛：</p>
+<pre><code class="language-ts">// server/plugins/meta.ts
+export default defineNitroPlugin((nitroApp) =&gt; {
+  nitroApp.hooks.hook('render:html', (html, { event }) =&gt; {
+    html.head.push('&lt;meta name=&quot;description&quot; content=&quot;自訂描述&quot; /&gt;')
+  })
+})
+</code></pre>
+<p>此方式宜節制使用 —— <code>useHead</code> 已涵蓋 99% 情境，靜態資源與 SEO 章節將介紹更順手的做法。</p>
+</div></article><article class="c-chapter-content multi-lang-pane" data-lang="en_US"><div class="mark-down code-content"><h1>Views</h1>
+<p>Nuxt gives you four layers to build the UI: <code>app.vue</code>, <strong>components</strong>, <strong>pages</strong>, and <strong>layouts</strong>. Each has a clear job, and Nuxt auto-wires them so you mostly add files and the rest just works.</p>
+<h2><code>app.vue</code></h2>
+<p>Nuxt treats <code>app.vue</code> as the entrypoint. If you don't need routing at all, you can stop here:</p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;div&gt;
+    &lt;h1&gt;Welcome&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<p>When you want per-route pages, include <code>&lt;NuxtPage /&gt;</code>:</p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;NuxtLayout&gt;
+    &lt;NuxtPage /&gt;
+  &lt;/NuxtLayout&gt;
+&lt;/template&gt;
+</code></pre>
+<p>If you <strong>delete</strong> <code>app.vue</code>, Nuxt generates a default entry that mounts <code>&lt;NuxtLayout&gt;&lt;NuxtPage /&gt;&lt;/NuxtLayout&gt;</code>.</p>
+<h2>Components</h2>
+<p>Anything under <code>app/components/</code> is auto-imported — no more <code>import Button from './Button.vue'</code>.</p>
+<pre><code>app/components/
+├── AppHeader.vue
+├── AppFooter.vue
+└── AppAlert.vue
+</code></pre>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;div&gt;
+    &lt;AppHeader /&gt;
+    &lt;AppAlert&gt;Hello from an auto-imported component.&lt;/AppAlert&gt;
+    &lt;AppFooter /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<p>Nested folders become name prefixes: <code>app/components/base/Button.vue</code> → <code>&lt;BaseButton /&gt;</code>.</p>
+<p>Tips:</p>
+<ul>
+<li>Use PascalCase in <code>&lt;template&gt;</code> for clarity.</li>
+<li>Add <code>Lazy</code> to defer loading: <code>&lt;LazyAppHeavy /&gt;</code>.</li>
+</ul>
+<h2>Pages</h2>
+<p>Pages live in <code>app/pages/</code>. Every <code>.vue</code> file is a route:</p>
+<pre><code>app/pages/
+├── index.vue          →  /
+├── about.vue          →  /about
+└── blog/
+    ├── index.vue      →  /blog
+    └── [id].vue       →  /blog/:id
+</code></pre>
+<pre><code class="language-vue">&lt;!-- app/pages/about.vue --&gt;
+&lt;template&gt;
+  &lt;section&gt;
+    &lt;h1&gt;About us&lt;/h1&gt;
+  &lt;/section&gt;
+&lt;/template&gt;
+</code></pre>
+<p>Pages are code-split, prefetched by <code>&lt;NuxtLink&gt;</code>, and can declare per-page metadata with <code>definePageMeta({ … })</code>.</p>
+<h2>Layouts</h2>
+<p>A layout wraps one or more pages so you can share chrome (header, footer, sidebar). Files live in <code>app/layouts/</code>:</p>
+<pre><code class="language-vue">&lt;!-- app/layouts/default.vue --&gt;
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;AppHeader /&gt;
+    &lt;slot /&gt;
+    &lt;AppFooter /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<p><code>default.vue</code> applies automatically. For a custom layout, opt in per-page:</p>
+<pre><code class="language-vue">&lt;script setup lang=&quot;ts&quot;&gt;
+definePageMeta({ layout: 'admin' })
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div&gt;Dashboard&lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<p>…and put the wrapper at <code>app/layouts/admin.vue</code>.</p>
+<h2><code>&lt;NuxtLayout&gt;</code> and <code>&lt;NuxtPage&gt;</code></h2>
+<ul>
+<li><code>&lt;NuxtPage /&gt;</code> is the &quot;outlet&quot; for file-based routes. It knows how to stream, prefetch, and animate.</li>
+<li><code>&lt;NuxtLayout&gt;</code> decides which layout wraps the current page. It accepts <code>name</code> for manual control:</li>
+</ul>
+<pre><code class="language-vue">&lt;NuxtLayout name=&quot;admin&quot;&gt;
+  &lt;NuxtPage /&gt;
+&lt;/NuxtLayout&gt;
+</code></pre>
+<p>If you have <strong>only one layout</strong>, skip layouts entirely and put the shell directly in <code>app.vue</code>.</p>
+<h2>Building blocks recap</h2>
+<table>
+<thead>
+<tr>
+<th>Need</th>
+<th>Use this</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Root entry / app-wide chrome</td>
+<td><code>app.vue</code> (or single layout)</td>
+</tr>
+<tr>
+<td>Reusable UI piece</td>
+<td>Component in <code>app/components/</code></td>
+</tr>
+<tr>
+<td>Route + view</td>
+<td>Page in <code>app/pages/</code></td>
+</tr>
+<tr>
+<td>Shared shell around several pages</td>
+<td>Layout in <code>app/layouts/</code></td>
+</tr>
+</tbody>
+</table>
+<h2>Advanced: customizing the HTML template</h2>
+<p>When you need to tweak the raw HTML that Nitro emits (beyond <code>useHead</code>), register a Nitro plugin with the <code>render:html</code> hook:</p>
+<pre><code class="language-ts">// server/plugins/meta.ts
+export default defineNitroPlugin((nitroApp) =&gt; {
+  nitroApp.hooks.hook('render:html', (html, { event }) =&gt; {
+    html.head.push('&lt;meta name=&quot;description&quot; content=&quot;My custom description&quot; /&gt;')
+  })
+})
+</code></pre>
+<p>Use this sparingly — <code>useHead</code> covers 99% of cases, and the next chapter (&quot;Assets&quot;) plus the SEO chapter show the ergonomic paths.</p>
+</div></article><!--]--></div><div class="c-chapter-nav" data-v-0a101b04><a href="/books/nuxtjs/03-configuration" class="nav-link nav-prev u-cartoon-box" data-v-0a101b04><i class="iconfont icon-arrow_left text-12" data-v-0a101b04></i><div class="nav-label" data-v-0a101b04><span class="nav-hint" data-v-0a101b04>Previous Chapter</span><span class="nav-title" data-v-0a101b04>Configuration</span></div></a><a href="/books/nuxtjs/05-assets" class="nav-link nav-next u-cartoon-box" data-v-0a101b04><div class="nav-label" data-v-0a101b04><span class="nav-hint" data-v-0a101b04>Next Chapter</span><span class="nav-title" data-v-0a101b04>Assets</span></div><i class="iconfont icon-arrow_right text-12" data-v-0a101b04></i></a></div></div></div><button class="sidebar-toggle"><i class="iconfont icon-caidan text-18"></i></button><!----></div><!--]--></main><div class="c-footer"><div class="common-footer-inner"><div class="logo-contract"><a href="/" class="inline-flex space-x-8 items-center"><div class="sub-logo"><svg t="1696732448231" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6740" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30"><defs><linearGradient id="left-to-right"><stop offset="0" stop-color="#ed3da1"><animate dur="3s" attributeName="offset" fill="freeze" values="-1;2;0" repeatCount="indefinite"></animate></stop><stop offset="0" stop-color="#ffe9f6"><animate dur="3s" attributeName="offset" fill="freeze" values="-1;2;0" repeatCount="indefinite"></animate></stop></linearGradient></defs><path d="M105.321374 914.265136c-11.700669 0-17.551004-11.702475-17.551003-17.541972 0-5.870203 5.850335-17.551004 11.7097-17.551004 269.155125-111.194286 561.722425-169.684988 848.441196-181.3983v5.839497c23.410369 0 52.662042-5.839497 76.076024-5.839497v11.711506c-292.558269 29.251673-579.284266 87.756824-854.300562 175.535323-17.551004 17.541972-40.964985 23.403144-64.375355 29.244447zM772.382332 580.741882c-29.260704 0-58.514183-5.861172-76.054349-29.240835-17.55281-23.412175-35.123682-46.826157-35.123681-76.079636 0-81.917327 23.403144-157.984319 76.068798-222.350642 46.835188-64.377161 117.042815-111.168999 193.106195-140.433316 29.251673 0 52.654817 17.563647 64.368129 40.954148-5.862978 5.850335-11.711506 11.711506-17.563647 11.711506 29.251673 11.700669 40.952342 35.102007 40.952342 64.366324 5.862978 163.834654-99.459299 310.121916-245.753787 351.072451z m157.996963-374.484627c-11.702475 5.850335-29.273347 17.551004-40.954148 29.264316-5.870203 0-5.870203-5.850335-5.870203-11.711506-87.778499 52.665654-146.281844 146.294487-152.114116 245.742949 0 11.711506 5.832272 52.665654 23.38147 46.835188 29.284184-11.7097 52.662042-23.423013 70.225688-46.835188 19.503523-21.441593 39.00524-42.894024 58.506958-64.344648 35.121876-46.81532 58.535857-105.320471 70.216658-163.847297 11.700669-17.55281-5.848528-29.253479-23.392307-35.103814zM122.872378 288.185419l-64.366323 29.251673c-5.839497 5.839497-11.689832 5.839497-17.540167 5.839497-5.862978 0-5.862978-11.713313-5.862978-17.540166 0-17.551004 11.713313-29.264316 29.273347-35.114651 35.103813-29.264316 70.20582-52.654817 111.158163-70.216657 17.551004 5.850335 29.264316 23.403144 35.11465 40.952341 0 17.540166 0 17.540166-81.919133 204.812282-29.249866 58.505151-52.651204 122.873281-58.523213 187.237798 0 5.852141 5.872009 17.55281 5.872009 23.412176v5.841303c-1.959745 1.948907-3.910458 3.912264-5.872009 5.861172-5.830466 0-11.700669 0-11.700669-5.861172-29.253479 0-52.663848-17.55281-58.505152-46.804482 0-46.813513 11.711506-99.470137 29.251673-140.433316 23.413982-64.366323 58.517795-122.871475 93.619802-187.237798zM637.792126 282.326054c11.700669 157.984319-87.760436 298.417635-239.892614 339.380813-29.264316 0-58.515989-5.850335-76.07783-29.264316-23.401338-17.561841-35.092976-46.813513-35.092976-76.056155 0-81.926358 23.403144-157.99335 76.068798-222.359673 46.804482-64.355486 117.008497-111.159968 193.086327-140.433316 29.242642 0 52.665654 17.551004 64.368129 40.975823-5.852141 5.839497-11.702475 11.689832-17.55281 11.689832 17.551004 17.549197 35.092976 46.811707 35.092976 76.066992z m-81.908295-35.103814c-11.7097 5.850335-29.260704 17.551004-40.963179 29.251673-5.850335 0-5.850335-5.850335-5.850335-11.700669-87.769468 52.665654-146.272813 146.28365-152.135791 245.762818 0 11.680801 5.862978 52.663848 23.413982 46.793645 29.251673-11.702475 52.665654-23.403144 70.20582-46.793645a140273.571944 140273.571944 0 0 0 58.515989-64.366324c35.103813-46.826157 58.514183-105.320471 70.214852-163.84549 11.713313-17.551004-5.839497-29.253479-23.401338-35.102008zM23.414885 808.944665c269.155125-111.170806 561.711587-169.684988 848.437584-181.3983v5.859365c29.251673 0 52.665654-5.859366 76.068798-5.859365v11.711506c-292.558269 29.26251-579.287878 87.778499-854.302368 175.544354-23.413982 11.713313-40.954148 17.554616-64.36813 23.3905h-5.837691c-5.872009 0-11.702475-5.835885-11.702475-17.551003 3.903233-3.896009 7.804661-7.797436 11.704282-11.697057z" fill="url(#left-to-right)" p-id="6741" class="logo-path"></path></svg></div><img class="h-50" src="/logo.svg"></a><div class="contacts"><!--[--><a class="contact-item" href="mailto:yldiswinter@gmail.com"><i class="iconfont icon-youxiang"></i></a><a class="contact-item" href="https://github.com/WinterMain"><i class="iconfont icon-github"></i></a><!--]--></div></div><div class="nav-area"><div class="pr-20"><p class="label"><span class="z-1">LINKS</span></p></div><div class="nav-items"><!--[--><!--[--><a href="/question" class="nav-item">Question</a><!--]--><!--[--><a href="/blog" class="nav-item">Blog</a><!--]--><!--[--><a href="/message" class="nav-item">Message</a><!--]--><!--[--><a class="nav-item" target="_blank" rel="noopener noreferrer" href="https://tools.winter100.com">Toolbox</a><!--]--><!--]--></div></div><div class="donate-area"><div class="pr-20"><p class="label"><span class="z-1">DONATE</span></p></div><div class="donate-list"><!--[--><div class="donate-item"><div class="c-common-qrcode"><canvas style="width:60px;height:60px;"></canvas></div><div class="ml-12"><div class="flex items-center mt-4"><img src="/images/btc.png" height="30" class="h-20"><span class="ml-8 text-primary font-w500 text-16 flex-1">BTC</span><!--[--><span class="c-copy el-tooltip__trigger el-tooltip__trigger"><i class="el-icon text-12" style=""><!--[--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M768 832a128 128 0 0 1-128 128H192A128 128 0 0 1 64 832V384a128 128 0 0 1 128-128v64a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64z"></path><path fill="currentColor" d="M384 128a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64V192a64 64 0 0 0-64-64zm0-64h448a128 128 0 0 1 128 128v448a128 128 0 0 1-128 128H384a128 128 0 0 1-128-128V192A128 128 0 0 1 384 64"></path></svg><!--]--></i></span><!--teleport start--><!--teleport end--><!--]--></div><p class="mt-12 text-addr"><span class="">1Q6ZDFC3FueXY3JocmeMqgiSsGGtppbvz2</span></p></div></div><div class="donate-item"><div class="c-common-qrcode"><canvas style="width:60px;height:60px;"></canvas></div><div class="ml-12"><div class="flex items-center mt-4"><img src="/images/eth.png" height="30" class="h-20"><span class="ml-8 text-primary font-w500 text-16 flex-1">ETH</span><!--[--><span class="c-copy el-tooltip__trigger el-tooltip__trigger"><i class="el-icon text-12" style=""><!--[--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M768 832a128 128 0 0 1-128 128H192A128 128 0 0 1 64 832V384a128 128 0 0 1 128-128v64a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64z"></path><path fill="currentColor" d="M384 128a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64V192a64 64 0 0 0-64-64zm0-64h448a128 128 0 0 1 128 128v448a128 128 0 0 1-128 128H384a128 128 0 0 1-128-128V192A128 128 0 0 1 384 64"></path></svg><!--]--></i></span><!--teleport start--><!--teleport end--><!--]--></div><p class="mt-12 text-addr"><span class="">0xff6FC30033269845d196cB48F6a0660598D218D8</span></p></div></div><!--]--></div></div><div class="flex-1 ml-20 flex justify-end xs:hidden"><div class="c-adsense mt-0"><div class="ad-container" style="background-image:url(/images/adsenseWinter.svg);"><!----></div></div></div></div></div><!--v-if--><!--]--></section><!--]--></div><div id="teleports"></div><script type="application/json" data-nuxt-data="nuxt-app" data-ssr id="__NUXT_DATA__" data-src="/books/nuxtjs/04-views/_payload.json?adf5c24d-6909-4c89-9550-b77b1bc7d41e">[{"state":1,"once":7,"_errors":8,"serverRendered":10,"path":11,"pinia":12,"prerenderedAt":43},["Reactive",2],{"$ssite-config":3},{"env":4,"name":5,"url":6},"production","Winter 100分","https://winter100.com/",["Set"],["ShallowReactive",9],{},true,"/books/nuxtjs/04-views",["Reactive",13],{"lang":14,"main":27},{"langOptions":15,"lang":24,"defaultLang":24},[16,20,23],{"val":17,"text":18,"icon":19},"zh_Hans_CN","简体中文","/images/cn.svg",{"val":21,"text":22,"icon":19},"zh_Hant_HK","繁体中文",{"val":24,"text":25,"icon":26},"en_US","English","/images/en.svg",{"category":28,"nav":29,"likes":30,"donateCoins":31},"browserplugin","all",[],[32,36,40],{"coin":33,"address":34,"icon":35},"BTC","1Q6ZDFC3FueXY3JocmeMqgiSsGGtppbvz2","/images/btc.png",{"coin":37,"address":38,"icon":39},"ETH","0xff6FC30033269845d196cB48F6a0660598D218D8","/images/eth.png",{"coin":41,"address":38,"icon":42},"CET","/images/cet.png",1777973623180]</script>
+<script>window.__NUXT__={};window.__NUXT__.config={public:{MODE:"",NODE_ENV:"production",NAME:"winter100"},app:{baseURL:"/",buildId:"adf5c24d-6909-4c89-9550-b77b1bc7d41e",buildAssetsDir:"/_nuxt/",cdnURL:""}}</script></body></html>
