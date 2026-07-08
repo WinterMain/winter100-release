@@ -1,0 +1,1 @@
+import{u as t,_ as o}from"./Bo1yFyWN.js";import{o as r,c as a,d as u,k as c,b as _,r as f}from"./BFZJ5fxd.js";const l={class:"c-page-func"},m={class:"func-stage"},h={__name:"PageFunc",setup(d){const{currentFunc:e}=t();return(n,i)=>{const s=o;return r(),a("div",l,[u(s,{"current-func":c(e)},null,8,["current-func"]),_("div",m,[f(n.$slots,"default",{func:c(e)})])])}}};export{h as _};
